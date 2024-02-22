@@ -1,4 +1,4 @@
 <h1>Welcome to Cheap Date</h1>
 
-<%= button_to "Login", "/login" %>
-<%= button_to "Create a User", "/register" %>
+<%= button_to "Login", "/login", method: :get, data: { turbo: false } %>
+<%= button_to "Create a User", "/register", method: :get, data: { turbo: false } %>

@@ -10,12 +10,14 @@ RSpec.describe "Landing Page" do
 
     click_button "Login"
 
-    expect(current_path).to eq "/login"
+    # expect(current_path).to eq("/login")
+    expect(current_path).to eq(login_path)
 
     visit "/"
 
     click_button "Create a User"
 
-    expect(current_path).to eq "/register"
+    # expect(current_path).to eq("/register")
+    expect(current_path).to eq(register_path)
   end
 end
