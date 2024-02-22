@@ -94,3 +94,4 @@ RSpec.configure do |config|
 end
 
 require 'webmock/rspec'
+require 'capybara/rspec'
