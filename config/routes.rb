@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   post "/login", to: "users#login_user"
   get "/register", to: "users#new"
   get "/users/:id", to: "users#show"
+  # post "/register", to: "users#create"
+  post "/users", to: "users#create"
+  
 end
