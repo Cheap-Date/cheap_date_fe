@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "welcome#index"
   get "/login", to: "users#login_form"
+  post "/login", to: "users#login_user"
   get "/register", to: "users#new"
+  get "/users/:id", to: "users#show"
 end
