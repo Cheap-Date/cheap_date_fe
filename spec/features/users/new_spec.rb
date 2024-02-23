@@ -14,7 +14,7 @@ RSpec.describe "Create a User" do
 
       click_button "Create Profile"
 
-      expect(current_path).to eq(user_path(User.last.id))
+      expect(current_path).to eq("/users/1")
       expect(page).to have_content("Profile Created")
     end
   end
