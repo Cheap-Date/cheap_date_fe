@@ -31,7 +31,7 @@ RSpec.describe "Create a User" do
       click_button "Create Profile"
 
       expect(current_path).to eq("/register")
-      expect(page).to have_content("Password does not match") 
+      expect(page).to have_content("Passwords do not match") 
     end
   end
 end
