@@ -1,3 +1,0 @@
-class YelpFacade
-  
-end
