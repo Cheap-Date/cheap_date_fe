@@ -3,8 +3,12 @@ class UsersController < ApplicationController
 
   end
 
-  def new
+  def login_user
 
+  end
+
+  def new
+    
   end
 
   def create
