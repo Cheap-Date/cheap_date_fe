@@ -1,6 +1,6 @@
 <h1>Create User Profile</h1>
 
-<%= form_with url: "/users/#{@user_facade.id}", method: :post, local: true do |form| %>
+<%= form_with url: "/users/#{@id}", method: :post, local: true, data: {turbo: false} do |form| %>
   <%= form.label :name, "Full Name" %>
   <%= form.text_field :name %><br>
   <%= form.label :email %>

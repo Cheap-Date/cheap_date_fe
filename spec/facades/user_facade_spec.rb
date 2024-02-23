@@ -8,4 +8,10 @@ RSpec.describe UserFacade do
       expect(facade).to be_a(UserFacade)
     end
   end
+
+  it "returns single user" do
+    user = UserFacade.new.user(1)
+
+    expect(user).to be_a(User)
+  end
 end
