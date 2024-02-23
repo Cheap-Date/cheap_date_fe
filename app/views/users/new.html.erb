@@ -1,0 +1,13 @@
+<h1>Create User Profile</h1>
+
+<%= form_with model: @user, local: true do |form| %>
+  <%= form.label :full_name, "Full Name" %>
+  <%= form.text_field :full_name %><br>
+  <%= form.label :email %>
+  <%= form.text_field :email %><br>
+  <%= form.label :password %>
+  <%= form.text_field :password %><br>
+  <%= form.label :password_confirmation, "Password Confirmation" %>
+  <%= form.text_field :password_confirmation %><br>
+  <%= form.submit "Create Profile" %>
+<% end %>

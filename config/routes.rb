@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/login", to: "users#login_form"
   get "/register", to: "users#new"
+  post "/register", to: "users#create"
 end
