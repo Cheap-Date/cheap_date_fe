@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       flash[:error] = "Please fill in all fields"
       redirect_to "/register"
     else
-      flash[:error] = "User could not be created: #{json.values.join(', ')}"
+      flash[:error] = "User could not be created: email #{json.values.join(', ')}"
       redirect_to "/register"
     end
   end
