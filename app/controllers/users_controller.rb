@@ -42,6 +42,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @id = params[:id]
     @user = UserFacade.new.user(params[:id])
   end
 end
