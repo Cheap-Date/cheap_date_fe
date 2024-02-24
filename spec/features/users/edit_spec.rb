@@ -17,6 +17,12 @@ RSpec.describe "Edit a User" do
       click_button "Edit Profile"
 
       expect(page).to have_content("Editing Tiger Woods's Profile")
+
+      expect(page).to have_field("Name", with: "Tiger Woods")
+      expect(page).to have_field("Email")
+      expect(page).to have_field("Password")
+      expect(page).to have_field("Password Confirmation")
+      expect(page).to have_button("Update Profile")
     end
   end
 end 

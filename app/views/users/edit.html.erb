@@ -1,1 +1,13 @@
 <h1><%= "Editing #{@user.name}'s Profile" %></h1>
+
+<%= form_with url: "/users", method: :patch, local: true, data: { turbo: false } do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, value: @user.name %><br>
+  <%= form.label :email %>
+  <%= form.text_field :email, value: @user.email %><br>
+  <%= form.label :password %>
+  <%= form.text_field :password %><br>
+  <%= form.label :password_confirmation, "Password Confirmation" %>
+  <%= form.text_field :password_confirmation %><br>
+  <%= form.submit "Update Profile" %>
+<% end %>
