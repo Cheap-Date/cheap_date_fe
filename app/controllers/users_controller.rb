@@ -62,6 +62,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    # require 'pry'; binding.pry
+    if params[:password] == params[:password_confirmation]
+      user = UserFacade.new.user(params[:id])
+      response = UserFacade.new.update_user(user, params[:name], params[:email], params[:password])
+      require 'pry'; binding.pry
+      session[:user_id] = response[:user_id]
+    end
+   
   end
 end

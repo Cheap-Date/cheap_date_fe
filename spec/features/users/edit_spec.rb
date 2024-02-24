@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Edit a User" do
   describe "Happy Path" do
-    xit "should describe the edit a user page" do
+    it "should describe the edit a user page" do
       visit "/register"
 
       fill_in :name, with: "Tiger Woods"
