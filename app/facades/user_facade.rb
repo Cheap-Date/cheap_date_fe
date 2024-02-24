@@ -9,6 +9,10 @@ class UserFacade
     service = UserService.new
     response = service.all_users
     data = response.find { |u| u[:attributes][:email] == email }
-    user = User.new(data)
+    if data
+      User.new(data)
+    else
+      nil
+    end
   end
 end
