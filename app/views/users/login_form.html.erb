@@ -5,8 +5,6 @@
   <%= form.text_field :email %>
   <%= form.label :password, "Password:" %>
   <%= form.text_field :password %>
-  <%= form.label :location, "Location:" %>
-  <%= form.text_field :location, value: cookies.signed[:location] %>
   <%= form.submit "Log In" %>
 <% end %>
 
