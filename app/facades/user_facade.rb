@@ -15,4 +15,8 @@ class UserFacade
       nil
     end
   end
+
+  def update_user(user, name, email, password)
+    response = UserService.new.update_user(user, name, email, password)
+  end
 end

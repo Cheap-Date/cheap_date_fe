@@ -60,4 +60,20 @@ class UsersController < ApplicationController
     flash[:notice] = "Goodbye, #{@user.name}, See You Soon, Have a Great Day Until Next Time, Friend!"
     redirect_to root_path
   end
+
+  def update
+    if params[:password] == params[:password_confirmation]
+      user = UserFacade.new.user(params[:id])
+      response = UserFacade.new.update_user(user, params[:name], params[:email], params[:password])
+      session[:user_id] = response[:id]
+    
+      if response.status == 200 && params[:email].present? && params[:name].present? && params[:password].present? && params[:password_confirmation].present?
+        flash[:success] = "Profile Updated"
+        redirect_to "/users/#{user.id}"
+      else 
+        flash[:error] = "Did not successfully update - please fill in all fields."
+        redirect_to "/users/#{user.id}/edit"
+      end 
+    end
+  end
 end
