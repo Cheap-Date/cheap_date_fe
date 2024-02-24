@@ -18,7 +18,5 @@ class UserFacade
 
   def update_user(user, name, email, password)
     response = UserService.new.update_user(user, name, email, password)
-    # response_body = JSON.parse(response.body, symbolize_names: true)
-    # require 'pry'; binding.pry
   end
 end

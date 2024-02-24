@@ -66,7 +66,7 @@ class UsersController < ApplicationController
       user = UserFacade.new.user(params[:id])
       response = UserFacade.new.update_user(user, params[:name], params[:email], params[:password])
       session[:user_id] = response[:id]
-      # require 'pry'; binding.pry
+    
       if response.status == 200 && params[:email].present? && params[:name].present? && params[:password].present? && params[:password_confirmation].present?
         flash[:success] = "Profile Updated"
         redirect_to "/users/#{user.id}"
@@ -74,11 +74,6 @@ class UsersController < ApplicationController
         flash[:error] = "Did not successfully update - please fill in all fields."
         redirect_to "/users/#{user.id}/edit"
       end 
-    # elsif !params[:email].present? || !params[:name].present? || !params[:password].present?
-    #   flash[:error] = "Please Fill In All Fields"
-    #   redirect_to "/users/#{user.id}/edit"
-      # require 'pry'; binding.pry
     end
-   
   end
 end
