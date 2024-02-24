@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#show"
   post "/users", to: "users#create"
   get "/users/:id/edit", to: "users#edit"
+  get "/users/:id/dates", to: "dates#index"
   get "/users/:id/dates/new", to: "dates#new"
   get "/users/:id/events/new", to: "events#new"
   get "/users/:id/foods/new", to: "foods#new"
-  delete "/users/logout", to: "users#logout_user"  
+  delete "/users/logout", to: "users#logout_user"
   patch "/users/:id", to: "users#update"
 end
