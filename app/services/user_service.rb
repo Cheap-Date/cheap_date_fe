@@ -9,6 +9,13 @@ class UserService
     users[:data]
   end
 
+  def update_user(user, name, email, password)
+    conn.patch("/api/v1/users/#{user.id}") do |request|
+      request.headers['Content-Type'] = 'application/json'
+      request.body = { name: name, email: email, password: password }.to_json
+    end
+  end
+
   private
 
   def get_url(url)
