@@ -1,0 +1,5 @@
+<h1><%= @user.name %>'s Dates</h1>
+
+<%= button_to "Create Date", "/users/#{@user.id}/dates/new", method: :get %>
+
+<%= button_to "Edit Date", method: :get %>
