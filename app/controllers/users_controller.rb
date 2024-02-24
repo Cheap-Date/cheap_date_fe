@@ -54,6 +54,13 @@ class UsersController < ApplicationController
     @user = UserFacade.new.user(params[:id])
   end
 
+  def logout_user
+    @user = UserFacade.new.user(session[:user_id])
+    session.delete(:user_id)
+    flash[:notice] = "Goodbye, #{@user.name}, See You Soon, Have a Great Day Until Next Time, Friend!"
+    redirect_to root_path
+  end
+
   def update
     # require 'pry'; binding.pry
   end
