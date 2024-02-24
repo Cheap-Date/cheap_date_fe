@@ -42,6 +42,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # require 'pry'; binding.pry
+    @user = UserFacade.new.user(params[:id])
   end
 end
