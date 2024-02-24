@@ -4,6 +4,11 @@ class UserService
     user[:data]
   end
 
+  def all_users
+    users = get_url("/api/v1/users")
+    users[:data]
+  end
+
   private
 
   def get_url(url)

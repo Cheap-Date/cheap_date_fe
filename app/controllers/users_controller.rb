@@ -4,7 +4,15 @@ class UsersController < ApplicationController
   end
 
   def login_user
-
+    @user = UserFacade.new.find_by_email(params[:email])
+    if @user #&& @user.authenticate(params[:password]) #this needs something on the backend (token?)
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome, #{@user.name}!"
+      redirect_to "/users/#{@user.id}"
+    else
+      flash[:error] = "Invalid email or password"
+      render :login_form
+    end
   end
 
   def new

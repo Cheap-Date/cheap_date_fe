@@ -9,9 +9,15 @@ RSpec.describe UserService do
     end
   end
 
-  it "returns a single user" do
+  it "returns a single user by id" do
     user = UserService.new.user_find(1)
 
     expect(user).to be_a(Hash)
+  end
+
+  it "returns a single user by email" do
+    user = UserService.new.all_users
+
+    expect(user).to be_an(Array)
   end
 end
