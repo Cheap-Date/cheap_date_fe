@@ -23,11 +23,12 @@ RSpec.describe "login page", type: :feature do
       expect(page).to have_button("Log In")
       expect(page).to have_link("Log In With Google")
 
-      fill_in "Email", with: mock_user.email
-      fill_in "Password", with: mock_user.password
-      click_button "Log In"
-      #as far as I can get without users
+      fill_in :email, with: "tiger@gmail.com"
+      fill_in :password, with: "golf123"
 
+      click_button "Log In"
+
+      expect(current_path).to eq("/users/3")
     end
   end
 end
