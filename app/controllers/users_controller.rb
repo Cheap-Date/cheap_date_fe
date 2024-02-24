@@ -45,4 +45,8 @@ class UsersController < ApplicationController
     @id = params[:id]
     @user = UserFacade.new.user(params[:id])
   end
+
+  def update
+    # require 'pry'; binding.pry
+  end
 end
