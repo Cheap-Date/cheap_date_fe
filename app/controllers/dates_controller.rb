@@ -6,6 +6,9 @@ class DatesController < ApplicationController
 
   def new
     @user = UserFacade.new.user(params[:id])
+  end
+
+  def create
     # require 'pry'; binding.pry
   end
 end
