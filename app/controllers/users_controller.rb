@@ -5,6 +5,14 @@ class UsersController < ApplicationController
 
   def login_user
     @user = UserFacade.new.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome #{@user.name}"
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "Invalid email or password"
+      render :login_form
+    end
   end
 
   def new
