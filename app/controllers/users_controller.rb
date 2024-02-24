@@ -40,4 +40,9 @@ class UsersController < ApplicationController
       redirect_to "/register"
     end
   end
+
+  def edit
+    @id = params[:id]
+    @user = UserFacade.new.user(params[:id])
+  end
 end

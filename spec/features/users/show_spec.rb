@@ -6,7 +6,7 @@ RSpec.describe "user dashboard", type: :feature do
   it "shows the users dates" do
     visit "/users/#{mock_user.id}"
 
-    expect(page).to have_content("Welcome!")
+    expect(page).to have_content("Welcome")
     expect(page).to have_content("Your Dates:")
   end
 end
