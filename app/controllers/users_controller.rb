@@ -40,4 +40,8 @@ class UsersController < ApplicationController
       redirect_to "/register"
     end
   end
+
+  def edit
+    # require 'pry'; binding.pry
+  end
 end
