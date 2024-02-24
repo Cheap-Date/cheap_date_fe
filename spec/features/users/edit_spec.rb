@@ -23,6 +23,16 @@ RSpec.describe "Edit a User" do
       expect(page).to have_field("Password")
       expect(page).to have_field("Password Confirmation")
       expect(page).to have_button("Update Profile")
+
+      fill_in :name, with: "Patrick Mahomes"
+      fill_in :email, with: "pat@gmail.com"
+      fill_in :password, with: "football123"
+      fill_in :password_confirmation, with: "football123"
+
+      click_button("Update Profile")
+
+      expect(page).to have_content("Profile Updated")
+      expect(page).to have_content("Welcome Patrick Mahomes")
     end
   end
 end 
