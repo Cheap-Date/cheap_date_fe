@@ -16,14 +16,19 @@ RSpec.describe "Create Date", type: :feature do
       expect(page).to have_content("Create a Date")
       expect(page).to have_field(:name)
       expect(page).to have_field(:date)
+      expect(page).to have_field(:time)
       expect(page).to have_field(:description)
-      expect(page).to have_field(:type)
+      expect(page).to have_field(:first_date)
 
       fill_in :name, with: "Beau Joes"
-      # fill_in :date, with: ""
+      fill_in :date, with: "3/12/2023"
+      fill_in :time, with: "7:00pm"
       fill_in :description, with: "Pizza date"
-      # fill_in :type, with: "first"
+      # fill_in :first_date, with: "True"
       expect(page).to have_button("Create Date")
+
+      expect(page).to have_content("Tiger Woods's Dates")
+      expect(page).to have_content("Beau Joes")
     end
   end
 end
