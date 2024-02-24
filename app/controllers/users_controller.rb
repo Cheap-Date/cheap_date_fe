@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def login_user
-
+    @user = UserFacade.new.find_by_email(params[:email])
   end
 
   def new
