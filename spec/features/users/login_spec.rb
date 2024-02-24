@@ -29,6 +29,7 @@ RSpec.describe "login page", type: :feature do
       click_button "Log In"
 
       expect(current_path).to eq("/users/3")
+      expect(page).to have_content("Welcome, Tiger Woods!")
     end
   end
 end
