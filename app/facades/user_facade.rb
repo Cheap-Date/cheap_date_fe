@@ -16,6 +16,17 @@ class UserFacade
     end
   end
 
+  def find_by_email_and_password(email, password)
+    service = UserService.new
+    response = service.find_by_email_and_pass(email, password)
+    data = JSON.parse(response.body, symbolize_names: true)
+    if data[:status] == 404
+      nil
+    else
+      User.new(data[:data])
+    end
+  end
+
   def update_user(user, name, email, password)
     response = UserService.new.update_user(user, name, email, password)
   end

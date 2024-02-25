@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def login_user
-    @user = UserFacade.new.find_by_email(params[:email])
+    @user = UserFacade.new.find_by_email_and_password(params[:email], params[:password])
     if @user #&& @user.authenticate(params[:password]) #this needs something on the backend (token?)
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}!"
@@ -66,14 +66,14 @@ class UsersController < ApplicationController
       user = UserFacade.new.user(params[:id])
       response = UserFacade.new.update_user(user, params[:name], params[:email], params[:password])
       session[:user_id] = response[:id]
-    
+
       if response.status == 200 && params[:email].present? && params[:name].present? && params[:password].present? && params[:password_confirmation].present?
         flash[:success] = "Profile Updated"
         redirect_to "/users/#{user.id}"
-      else 
+      else
         flash[:error] = "Did not successfully update - please fill in all fields."
         redirect_to "/users/#{user.id}/edit"
-      end 
+      end
     end
   end
 end

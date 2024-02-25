@@ -18,7 +18,7 @@ RSpec.describe "user dashboard", type: :feature do
   end
 
   it "shows a list of dates, and buttons to discover events, foods, add a new date and log out" do
-    expect(current_path).to eq("/users/3")
+    expect(current_path).to eq("/users/4")
     expect(page).to have_content("Welcome, Tiger Woods!")
     expect(page).to have_button("Add New Date")
     expect(page).to have_button("Discover Events")
@@ -29,37 +29,37 @@ RSpec.describe "user dashboard", type: :feature do
 
   describe "add new date button" do
     it "navigates to the new date page" do
-      expect(current_path).to eq("/users/3")
+      expect(current_path).to eq("/users/4")
 
       click_button("Add New Date")
 
-      expect(current_path).to eq("/users/3/dates/new")
+      expect(current_path).to eq("/users/4/dates/new")
     end
   end
 
   describe "discover events button" do
     it "navigates to the discover events page" do
-      expect(current_path).to eq("/users/3")
+      expect(current_path).to eq("/users/4")
 
       click_button("Discover Events")
 
-      expect(current_path).to eq("/users/3/events/new")
+      expect(current_path).to eq("/users/4/events/new")
     end
   end
 
   describe "discover foods button" do
     it "navigates to the discover foods page" do
-      expect(current_path).to eq("/users/3")
+      expect(current_path).to eq("/users/4")
 
       click_button("Discover Foods")
 
-      expect(current_path).to eq("/users/3/foods/new")
+      expect(current_path).to eq("/users/4/foods/new")
     end
   end
 
   describe "log out button" do
     it "navigates to the root page" do
-      expect(current_path).to eq("/users/3")
+      expect(current_path).to eq("/users/4")
 
       click_button("Log Out")
 
