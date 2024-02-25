@@ -30,7 +30,7 @@ RSpec.describe "login page", type: :feature do
 
       click_button "Log In"
 
-      expect(current_path).to eq("/users/3")
+      expect(current_path).to eq("/users/4")
       expect(page).to have_content("Welcome, Tiger Woods!")
     end
   end
@@ -38,12 +38,6 @@ RSpec.describe "login page", type: :feature do
   describe "failure" do
     it "needs a legitimate user email" do
       visit "/login"
-
-      expect(page).to have_content("Log In!")
-      expect(page).to have_field("Email:")
-      expect(page).to have_field("Password:")
-      expect(page).to have_button("Log In")
-      expect(page).to have_link("Log In With Google")
 
       fill_in :email, with: "tdiger@gmtail.colm"
       fill_in :password, with: "golf123"

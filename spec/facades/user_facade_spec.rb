@@ -16,10 +16,16 @@ RSpec.describe UserFacade do
   end
 
   it "returns a single user by email" do
-    user = UserFacade.new.find_by_email("g@goo.com")
+    user = UserFacade.new.find_by_email("tiger@gmail.com")
 
     expect(user).to be_a(User)
-    expect(user.name).to eq("bob")
-    expect(user.email).to eq("g@goo.com")
+    expect(user.name).to eq("Tiger Woods")
+    expect(user.email).to eq("tiger@gmail.com")
+  end
+
+  it "returns user by email and password" do
+    user = UserFacade.new.find_by_email_and_password("tiger@gmail.com", "golf123")
+
+    expect(user).to be_a(User)
   end
 end

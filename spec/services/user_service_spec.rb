@@ -20,4 +20,12 @@ RSpec.describe UserService do
 
     expect(user).to be_an(Array)
   end
+
+  describe ".find_by_email_and_pass" do
+    it "has returns a faraday response" do
+      user = UserService.new.find_by_email_and_pass("tiger@gmail.com", "golf123")
+
+      expect(user).to be_a(Faraday::Response)
+    end
+  end
 end
