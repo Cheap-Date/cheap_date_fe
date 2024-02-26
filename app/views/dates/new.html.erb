@@ -13,3 +13,7 @@
   <%= form.select :first_date, ["True", "False"] %><br>
   <%= form.submit "Create Date" %>
 <% end %>
+
+<%= javascript_include_tag 'geolocation' %>
+
+<%= button_tag 'Get Location', id: 'get-location', class: 'btn btn-primary' %>
