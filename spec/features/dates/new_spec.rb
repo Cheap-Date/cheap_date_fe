@@ -29,8 +29,8 @@ RSpec.describe "Create Date", type: :feature do
 
       click_button "Create Date" #as far as I can get right now
 
-      # expect(page).to have_content("Tiger Woods's Dates")
-      # expect(page).to have_content("Beau Joes")
+      expect(page).to have_content("Tiger Woods's Dates")
+      expect(page).to have_content("Beau Joes")
     end
   end
 end
