@@ -9,20 +9,20 @@ RSpec.describe UserService do
     end
   end
 
-  it "returns a single user by id" do
+  it "returns a single user by id", :vcr do
     user = UserService.new.user_find(1)
 
     expect(user).to be_a(Hash)
   end
 
-  it "returns a single user by email" do
+  it "returns a single user by email", :vcr do
     user = UserService.new.all_users
 
     expect(user).to be_an(Array)
   end
 
   describe ".find_by_email_and_pass" do
-    it "has returns a faraday response" do
+    it "has returns a faraday response", :vcr do
       user = UserService.new.find_by_email_and_pass("tiger@gmail.com", "golf123")
 
       expect(user).to be_a(Faraday::Response)

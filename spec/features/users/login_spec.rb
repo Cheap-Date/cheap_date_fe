@@ -16,7 +16,7 @@ RSpec.describe "login page", type: :feature do
     end
 
   describe "success" do
-    it "has a form for logging in and it works when the username and password are correct" do
+    it "has a form for logging in and it works when the username and password are correct", :vcr do
       visit "/login"
 
       expect(page).to have_content("Log In!")
@@ -36,7 +36,7 @@ RSpec.describe "login page", type: :feature do
   end
 
   describe "failure" do
-    it "needs a legitimate user email" do
+    it "needs a legitimate user email", :vcr do
       visit "/login"
 
       fill_in :email, with: "tdiger@gmtail.colm"

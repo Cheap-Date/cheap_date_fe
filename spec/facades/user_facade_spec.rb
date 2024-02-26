@@ -2,20 +2,20 @@ require "rails_helper"
 
 RSpec.describe UserFacade do
   describe "instantiation" do
-    it "exists" do
+    it "exists", :vcr do
       facade = UserFacade.new
 
       expect(facade).to be_a(UserFacade)
     end
   end
 
-  it "returns single user by id" do
+  it "returns single user by id", :vcr do
     user = UserFacade.new.user(1)
 
     expect(user).to be_a(User)
   end
 
-  it "returns a single user by email" do
+  it "returns a single user by email", :vcr do
     user = UserFacade.new.find_by_email("tiger@gmail.com")
 
     expect(user).to be_a(User)
@@ -23,7 +23,7 @@ RSpec.describe UserFacade do
     expect(user.email).to eq("tiger@gmail.com")
   end
 
-  it "returns user by email and password" do
+  it "returns user by email and password", :vcr do
     user = UserFacade.new.find_by_email_and_password("tiger@gmail.com", "golf123")
 
     expect(user).to be_a(User)

@@ -10,14 +10,14 @@ RSpec.describe "user dashboard", type: :feature do
     click_button "Log In"
   end
 
-  it "renders" do
+  it "renders", :vcr do
     visit "/users/#{mock_user.id}"
 
     expect(page).to have_content("Welcome")
     expect(page).to have_content("Your Dates:")
   end
 
-  it "shows a list of dates, and buttons to discover events, foods, add a new date and log out" do
+  it "shows a list of dates, and buttons to discover events, foods, add a new date and log out", :vcr do
     expect(current_path).to eq("/users/4")
     expect(page).to have_content("Welcome, Tiger Woods!")
     expect(page).to have_button("Add New Date")
@@ -28,7 +28,7 @@ RSpec.describe "user dashboard", type: :feature do
   end
 
   describe "add new date button" do
-    it "navigates to the new date page" do
+    it "navigates to the new date page", :vcr do
       expect(current_path).to eq("/users/4")
 
       click_button("Add New Date")
@@ -38,7 +38,7 @@ RSpec.describe "user dashboard", type: :feature do
   end
 
   describe "discover events button" do
-    it "navigates to the discover events page" do
+    it "navigates to the discover events page", :vcr do
       expect(current_path).to eq("/users/4")
 
       click_button("Discover Events")
@@ -48,7 +48,7 @@ RSpec.describe "user dashboard", type: :feature do
   end
 
   describe "discover foods button" do
-    it "navigates to the discover foods page" do
+    it "navigates to the discover foods page", :vcr do
       expect(current_path).to eq("/users/4")
 
       click_button("Discover Foods")
@@ -58,7 +58,7 @@ RSpec.describe "user dashboard", type: :feature do
   end
 
   describe "log out button" do
-    it "navigates to the root page" do
+    it "navigates to the root page", :vcr do
       expect(current_path).to eq("/users/4")
 
       click_button("Log Out")

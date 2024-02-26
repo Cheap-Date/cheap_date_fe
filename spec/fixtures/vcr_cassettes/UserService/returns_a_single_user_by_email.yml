@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6f4bbd51b32893a86e4998a9e863c89d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 613a4cde-5c42-4fd6-b36d-7845c04382f8
+      X-Runtime:
+      - '0.016912'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=4.35, instantiation.active_record;dur=0.06,
+        process_action.action_controller;dur=13.97
+      Content-Length:
+      - '3098'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}},{"id":"2","type":"user","attributes":{"name":"Tiger
+        Woods","email":"solomon@runolfsson.test"},"relationships":{"meetups":{"data":[]}}},{"id":"3","type":"user","attributes":{"name":"Tiger
+        Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[]}}},{"id":"4","type":"user","attributes":{"name":"Tiger
+        Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}},{"id":"5","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"yevette@koelpin.test"},"relationships":{"meetups":{"data":[]}}},{"id":"6","type":"user","attributes":{"name":"Tiger
+        Woods","email":"maryanna.gutkowski@zemlak.example"},"relationships":{"meetups":{"data":[]}}},{"id":"7","type":"user","attributes":{"name":"Tiger
+        Woods","email":"valeria.mayer@crist.example"},"relationships":{"meetups":{"data":[]}}},{"id":"8","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"eli_bashirian@white.example"},"relationships":{"meetups":{"data":[]}}},{"id":"9","type":"user","attributes":{"name":"Tiger
+        Woods","email":"vincenzo@ruecker.test"},"relationships":{"meetups":{"data":[]}}},{"id":"10","type":"user","attributes":{"name":"Tiger
+        Woods","email":"zetta@schiller-schroeder.example"},"relationships":{"meetups":{"data":[]}}},{"id":"11","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"quentin.medhurst@oberbrunner.test"},"relationships":{"meetups":{"data":[]}}},{"id":"12","type":"user","attributes":{"name":"Tiger
+        Woods","email":"william.langosh@sanford.test"},"relationships":{"meetups":{"data":[]}}},{"id":"13","type":"user","attributes":{"name":"Tiger
+        Woods","email":"damion_lang@mitchell-mcdermott.example"},"relationships":{"meetups":{"data":[]}}},{"id":"14","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"bret@johnston.test"},"relationships":{"meetups":{"data":[]}}},{"id":"15","type":"user","attributes":{"name":"Tiger
+        Woods","email":"angla.wilkinson@miller.test"},"relationships":{"meetups":{"data":[]}}},{"id":"16","type":"user","attributes":{"name":"Tiger
+        Woods","email":"heike@kessler.test"},"relationships":{"meetups":{"data":[]}}},{"id":"17","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"temeka_veum@bechtelar-bogisich.test"},"relationships":{"meetups":{"data":[]}}},{"id":"18","type":"user","attributes":{"name":"Tiger
+        Woods","email":"casey.gusikowski@batz.example"},"relationships":{"meetups":{"data":[]}}},{"id":"19","type":"user","attributes":{"name":"Tiger
+        Woods","email":"jackelyn@huel.test"},"relationships":{"meetups":{"data":[]}}},{"id":"20","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"mervin@nicolas.test"},"relationships":{"meetups":{"data":[]}}},{"id":"21","type":"user","attributes":{"name":"Tiger
+        Woods","email":"renita.toy@hessel.example"},"relationships":{"meetups":{"data":[]}}},{"id":"22","type":"user","attributes":{"name":"Tiger
+        Woods","email":"nestor_prosacco@white-mosciski.test"},"relationships":{"meetups":{"data":[]}}}]}'
+  recorded_at: Mon, 26 Feb 2024 19:48:56 GMT
+recorded_with: VCR 6.2.0
