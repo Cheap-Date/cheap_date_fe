@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   
   get "/users/:id/dates", to: "dates#index"
   get "/users/:id/dates/new", to: "dates#new"
-  post "/users/:id/dates", to: "dates#create"
+  post "/users/:id/meetups", to: "dates#create"
 
   get "/users/:id/events/new", to: "events#new"
 

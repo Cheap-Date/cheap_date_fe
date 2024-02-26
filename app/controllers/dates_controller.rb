@@ -12,6 +12,7 @@ class DatesController < ApplicationController
     @user = UserFacade.new.user(params[:id])
     if meetup_params
       response = MeetupFacade.create_meetup(params[:name], params[:date], params[:time], params[:description], params[:first_date], @user.id)
+    require 'pry'; binding.pry
     end
     # require 'pry'; binding.pry
   end

@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ad9b3b82-e53e-48a5-8137-63ab52c9e90e
+      - 58fdc381-2d0f-4d64-bb03-f38211398cb6
       X-Runtime:
-      - '0.328091'
+      - '0.235095'
       Server-Timing:
-      - start_processing.action_controller;dur=0.02, sql.active_record;dur=40.86,
-        instantiation.active_record;dur=0.19, process_action.action_controller;dur=320.79
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.02, instantiation.active_record;dur=0.29,
+        process_action.action_controller;dur=227.92
       Content-Length:
       - '135'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Mon, 26 Feb 2024 22:42:58 GMT
+  recorded_at: Mon, 26 Feb 2024 23:23:07 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,18 +88,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 061ef109-7c23-4b85-978e-005b821e7699
+      - 721b6ec7-0804-4e9b-88c0-573654a0d69a
       X-Runtime:
-      - '0.008210'
+      - '0.005280'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.75
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.31
       Content-Length:
       - '135'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Mon, 26 Feb 2024 22:42:58 GMT
+  recorded_at: Mon, 26 Feb 2024 23:23:07 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/3
@@ -137,18 +137,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 93b8ba3d-6c97-4f91-afdd-653c20044861
+      - e65b19ae-2d49-423a-93d8-2cc40b53f167
       X-Runtime:
-      - '0.005219'
+      - '0.004233'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.50, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.68
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.38
       Content-Length:
       - '147'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Mon, 26 Feb 2024 22:42:58 GMT
+  recorded_at: Mon, 26 Feb 2024 23:23:07 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/3
@@ -186,16 +186,67 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2ec3850-25e6-403d-ab98-2b959b7e6380
+      - 7d3e174c-52db-4303-a9f4-145f130dd2c9
       X-Runtime:
-      - '0.013230'
+      - '0.004747'
       Server-Timing:
-      - start_processing.action_controller;dur=0.02, sql.active_record;dur=0.69, instantiation.active_record;dur=0.25,
-        process_action.action_controller;dur=6.06
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.21, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.44
       Content-Length:
       - '147'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Mon, 26 Feb 2024 22:43:04 GMT
+  recorded_at: Mon, 26 Feb 2024 23:23:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/3/meetups
+    body:
+      encoding: UTF-8
+      string: '{"name":"Beau Joes","date":"3/12/2023","time":"7:00pm","description":"Pizza
+        date","first_date":"True","id":"3"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a508ccfe-0aaf-42c9-b9a7-d9eed50eda27
+      X-Runtime:
+      - '0.033749'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.11, instantiation.active_record;dur=0.03,
+        unpermitted_parameters.action_controller;dur=0.00, process_action.action_controller;dur=16.21
+      Content-Length:
+      - '114'
+    body:
+      encoding: UTF-8
+      string: '{"error":["Title can''t be blank","Location can''t be blank","Start
+        time can''t be blank","End time can''t be blank"]}'
+  recorded_at: Mon, 26 Feb 2024 23:23:07 GMT
 recorded_with: VCR 6.2.0
