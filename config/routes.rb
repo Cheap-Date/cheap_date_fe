@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "/users/:id/meetups", to: "dates#index"
   get "/users/:id/dates/new", to: "dates#new"
   post "/users/:id/meetups", to: "dates#create"
+  get "/users/:id/meetups/:meetup_id/edit", to: "dates#edit"
 
   get "/users/:id/events/new", to: "events#new"
 

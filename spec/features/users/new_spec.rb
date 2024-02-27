@@ -8,7 +8,7 @@ RSpec.describe "Create a User" do
       expect(page).to have_content("Create User Profile")
 
       fill_in :name, with: "Tiger Woods"
-      fill_in :email, with: "tiga@woods.golf" # Generate a unique email
+      fill_in :email, with: "tigadr@woods.golf" # Generate a unique email
       fill_in :password, with: "golf123"
       fill_in :password_confirmation, with: "golf123"
 
