@@ -2,11 +2,7 @@
 http_interactions:
 - request:
     method: post
-
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=annabel@donnelly.example&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
-
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tiga@woods.golf&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
-
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tigadr0@woods.golf&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -23,8 +19,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 201
+      message: Created
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -39,48 +35,27 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Etag:
-      - W/"66cfbdc8e3b912c419675fac8f710e86"
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - ff0c5c4e-8cbc-4f00-9709-435e868a1578
-      X-Runtime:
-      - '0.241108'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=14.77,
-        transaction.active_record;dur=15.11, process_action.action_controller;dur=238.24
-      Content-Length:
-      - '227'
-    body:
-      encoding: UTF-8
-      string: '{"id":112,"name":"Tiger Woods","email":"annabel@donnelly.example","password_digest":"$2a$12$5EKXPzEmay1XiMwo41Dk.OmfoLhmn07RxsYULY5aDOcdLUZuLNl5.","created_at":"2024-02-27T15:43:49.647Z","updated_at":"2024-02-27T15:43:49.647Z"}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/112
-
-      - W/"f754d0f4b9e996154b27d0f3d5e96225"
+      - W/"2d43310f5ee592fa4e47f9f68eec5670"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9c977d65-e844-40fe-a186-50410e670cb0
+      - 532fe578-9171-41b4-b472-0437498a4ea6
       X-Runtime:
-      - '0.253411'
+      - '0.239430'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=2.70, transaction.active_record;dur=2.95,
-        process_action.action_controller;dur=242.53
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.78, transaction.active_record;dur=2.11,
+        process_action.action_controller;dur=233.35
       Content-Length:
-      - '217'
+      - '219'
     body:
       encoding: UTF-8
-      string: '{"id":75,"name":"Tiger Woods","email":"tiga@woods.golf","password_digest":"$2a$12$IuKX3CrLSzxXxNP3/Jx1xOpBsWs4x6Kr44SquMeZ6U4JjrKdrjHlW","created_at":"2024-02-27T01:38:42.681Z","updated_at":"2024-02-27T01:38:42.681Z"}'
-  recorded_at: Tue, 27 Feb 2024 01:38:42 GMT
+      string: '{"id":7,"name":"Tiger Woods","email":"tigadr0@woods.golf","password_digest":"$2a$12$sJ/uagQxE/Ah50XNvh/XX.hj9bhUeSzvcubvgGCtu5foxcOMO/F3O","created_at":"2024-02-27T23:43:17.272Z","updated_at":"2024-02-27T23:43:17.272Z"}'
+  recorded_at: Tue, 27 Feb 2024 23:43:17 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/75
-
+    uri: http://localhost:3000/api/v1/users/7
     body:
       encoding: US-ASCII
       string: ''
@@ -109,41 +84,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Etag:
-
-      - W/"d93ca84ebbff5ba8428792e786d74dbd"
+      - W/"45193ed9adc762d6fd30657b72362360"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b0767fd4-f536-4733-95b2-08321c7c73da
+      - 93e82b77-3605-4fd0-931b-e156506f50cc
       X-Runtime:
-      - '0.004228'
+      - '0.004240'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.42
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.34
       Content-Length:
-      - '146'
+      - '138'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"112","type":"user","attributes":{"name":"Tiger Woods","email":"annabel@donnelly.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
-
-      - W/"fbd50bad1f3d1911ffa64f4b59c5faa0"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8797b363-ee3c-42fe-b94b-adb4e94c635f
-      X-Runtime:
-      - '0.003428'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.24
-      Content-Length:
-      - '136'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"75","type":"user","attributes":{"name":"Tiger Woods","email":"tiga@woods.golf"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:38:42 GMT
-
+      string: '{"data":{"id":"7","type":"user","attributes":{"name":"Tiger Woods","email":"tigadr0@woods.golf"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 23:43:17 GMT
 recorded_with: VCR 6.2.0

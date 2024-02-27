@@ -33,20 +33,20 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"cd0652bd2dcbb6398d127bcf1dd2517d"
+      - W/"5c5a22958031cf053a7b23ca4ddd54cd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aee7c586-eca4-4f84-a49c-c3812b576afe
+      - 58e1b12d-2bea-4ce5-86b1-b9b548d640f3
       X-Runtime:
-      - '0.011655'
+      - '0.024715'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.87, instantiation.active_record;dur=0.17,
-        process_action.action_controller;dur=5.43
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=12.32,
+        instantiation.active_record;dur=0.22, process_action.action_controller;dur=17.28
       Content-Length:
-      - '151'
+      - '148'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:45 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 23:43:12 GMT
 recorded_with: VCR 6.2.0
