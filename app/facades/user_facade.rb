@@ -3,7 +3,6 @@ class UserFacade
     service = UserService.new
     response = service.user_find(id)
     user = User.new(response)
-    # require 'pry'; binding.pry
   end
 
   def find_by_email(email)

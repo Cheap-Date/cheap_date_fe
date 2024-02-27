@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tonda.erdman@feest-bahringer.test&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=ciera@wehner.example&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -37,25 +37,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"476345d40a3ab325319baedcd09c4598"
+      - W/"4c7a0554aac8f12fadc41631764f54a6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4c06d882-5286-4b0c-bcf8-c5101670a48e
+      - dd76ab0a-dab8-4baf-80e0-6be7f381621b
       X-Runtime:
-      - '0.230309'
+      - '0.231098'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=2.33, transaction.active_record;dur=2.71,
-        process_action.action_controller;dur=226.95
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.94, transaction.active_record;dur=2.74,
+        process_action.action_controller;dur=228.05
       Content-Length:
-      - '235'
+      - '222'
     body:
       encoding: UTF-8
-      string: '{"id":72,"name":"Tiger Woods","email":"tonda.erdman@feest-bahringer.test","password_digest":"$2a$12$NyfjsIDCHyGSQ5J5OJrBZ.oIhWNwoEFjS45e3xOQgP8AhKmkWeyYa","created_at":"2024-02-27T00:41:36.800Z","updated_at":"2024-02-27T00:41:36.800Z"}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
+      string: '{"id":81,"name":"Tiger Woods","email":"ciera@wehner.example","password_digest":"$2a$12$GSUyQNzw/3DfR7bX6VGy..tjZ3yCuAH/BBiMy7xWASMv2KF6WEwXS","created_at":"2024-02-27T01:07:21.391Z","updated_at":"2024-02-27T01:07:21.391Z"}'
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/72
+    uri: http://localhost:3000/api/v1/users/81
     body:
       encoding: US-ASCII
       string: ''
@@ -86,126 +86,126 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9aff94565e7fe25c3342bcd5a4049345"
+      - W/"f2bf17cf8a5732bcff5012c0065beb0e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d797495b-57fb-4932-a300-686e138fc2f6
+      - 270ed2a6-0df1-4ed2-9230-e3b31054d8e0
       X-Runtime:
-      - '0.004405'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.18, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.28
-      Content-Length:
-      - '154'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"tonda.erdman@feest-bahringer.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"9aff94565e7fe25c3342bcd5a4049345"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 62e2db50-eea6-41b8-b321-07f4d34a2026
-      X-Runtime:
-      - '0.004548'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.19, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.70
-      Content-Length:
-      - '154'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"tonda.erdman@feest-bahringer.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"9aff94565e7fe25c3342bcd5a4049345"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a4b3044b-442a-4f27-8734-692ccc1fcfe9
-      X-Runtime:
-      - '0.004526'
+      - '0.004210'
       Server-Timing:
       - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.62
+        process_action.action_controller;dur=1.37
       Content-Length:
-      - '154'
+      - '141'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"tonda.erdman@feest-bahringer.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"name":"Tiger Woods","email":"ciera@wehner.example"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/81
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f2bf17cf8a5732bcff5012c0065beb0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4158f145-5122-4ccb-bf46-640982fdc2cd
+      X-Runtime:
+      - '0.004051'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.21, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.25
+      Content-Length:
+      - '141'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"81","type":"user","attributes":{"name":"Tiger Woods","email":"ciera@wehner.example"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/81
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f2bf17cf8a5732bcff5012c0065beb0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 918e51e9-f784-40b7-8279-10d2bedefe09
+      X-Runtime:
+      - '0.005526'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.55, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.13
+      Content-Length:
+      - '141'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"81","type":"user","attributes":{"name":"Tiger Woods","email":"ciera@wehner.example"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/users/72
+    uri: http://localhost:3000/api/v1/users/81
     body:
       encoding: UTF-8
-      string: '{"name":"","email":"tonda.erdman@feest-bahringer.test","password":""}'
+      string: '{"name":"","email":"ciera@wehner.example","password":""}'
     headers:
       User-Agent:
       - Faraday v2.9.0
@@ -237,21 +237,21 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 9ff8ba72-5bce-4070-a220-c2e3a98186a4
+      - a323ff01-016f-4c89-b121-7e5a2c8c59a7
       X-Runtime:
-      - '0.005212'
+      - '0.005864'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.08, instantiation.active_record;dur=0.02,
-        transaction.active_record;dur=1.00, process_action.action_controller;dur=2.54
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.00, instantiation.active_record;dur=0.03,
+        transaction.active_record;dur=0.91, process_action.action_controller;dur=2.84
       Content-Length:
       - '27'
     body:
       encoding: UTF-8
       string: '{"name":["can''t be blank"]}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/72
+    uri: http://localhost:3000/api/v1/users/81
     body:
       encoding: US-ASCII
       string: ''
@@ -282,20 +282,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9aff94565e7fe25c3342bcd5a4049345"
+      - W/"f2bf17cf8a5732bcff5012c0065beb0e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7205aa27-038f-4023-b232-d91c71ec347e
+      - 8cabc16c-45bb-40d9-af4e-966fb39c3cfe
       X-Runtime:
-      - '0.003799'
+      - '0.004851'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.23, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.64, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.07
       Content-Length:
-      - '154'
+      - '141'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"tonda.erdman@feest-bahringer.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:41:36 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"name":"Tiger Woods","email":"ciera@wehner.example"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 01:07:21 GMT
 recorded_with: VCR 6.2.0

@@ -6,8 +6,6 @@ class MeetupService
       req.headers['Content-Type'] = 'application/json'
       req.body = { title: title, location: location, start_time: start_time, end_time: end_time, first_date: first_date, id: id}.to_json
     end
-    # json = JSON.parse(request.body, symbolize_names: true)
-    # require 'pry'; binding.pry
   end
 
   def self.find_meetup(id)

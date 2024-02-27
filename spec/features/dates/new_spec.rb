@@ -27,7 +27,7 @@ RSpec.describe "Create Date", type: :feature do
       # fill_in :first_date, with: "True"
       expect(page).to have_button("Create Date")
 
-      click_button "Create Date" #as far as I can get right now
+      click_button "Create Date" 
 
       expect(page).to have_content("Tiger Woods's Dates")
       expect(page).to have_content("Beau Joes Pizza Date")
