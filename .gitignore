@@ -33,3 +33,9 @@ coverage
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore figaro application.yml
+config/application.yml
+
+# Ignore ENV file
+.env
