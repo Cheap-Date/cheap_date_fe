@@ -2,6 +2,7 @@ class DatesController < ApplicationController
 
   def index
     @user = UserFacade.new.user(params[:id])
+    @meetup_facade = MeetupFacade.find_meetup(@user.id)
   end
 
   def new

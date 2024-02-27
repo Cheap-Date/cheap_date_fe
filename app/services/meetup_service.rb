@@ -9,4 +9,12 @@ class MeetupService
     # json = JSON.parse(request.body, symbolize_names: true)
     # require 'pry'; binding.pry
   end
+
+  def self.find_meetup(id)
+    conn = Faraday.new(url: "http://localhost:3000")
+
+    request = conn.get("/api/v1/users/#{id}/meetups")
+    json = JSON.parse(request.body)
+    # require 'pry'; binding.pry
+  end
 end
