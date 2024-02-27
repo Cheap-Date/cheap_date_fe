@@ -1,14 +1,14 @@
 <h1>Create a Date</h1>
 
 <%= form_with url: "/users/#{@user.id}/meetups", method: :post, local: true, data: { turbo: false } do |form| %>
-  <%= form.label :name, "Name" %>
-  <%= form.text_field :name %><br>
-  <%= form.label :date, "Day" %>
-  <%= form.date_field :date %><br>
-  <%= form.label :time %>
-  <%= form.time_field :time %><br>
-  <%= form.label :description, "Description" %>
-  <%= form.text_field :description %><br>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %><br>
+  <%= form.label :location, "Location" %>
+  <%= form.text_field :location %><br>
+  <%= form.label :start_time, "Start Time" %>
+  <%= form.time_field :start_time %><br>
+  <%= form.label :end_time, "End Time" %>
+  <%= form.time_field :end_time %><br>
   <%= form.label :first_date, "First Date?" %>
   <%= form.select :first_date, ["True", "False"] %><br>
   <%= form.submit "Create Date" %>

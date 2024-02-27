@@ -1,10 +1,12 @@
 class MeetupService
-  def self.create_meetup(name, date, time, description, first_date, id)
+  def self.create_meetup(title, location, start_time, end_time, first_date, id)
     conn = Faraday.new(url: "http://localhost:3000")
 
     request = conn.post("/api/v1/users/#{id}/meetups") do |req|
       req.headers['Content-Type'] = 'application/json'
-      req.body = { name: name, date: date, time: time, description: description, first_date: first_date, id: id}.to_json
+      req.body = { title: title, location: location, start_time: start_time, end_time: end_time, first_date: first_date, id: id}.to_json
     end
+    # json = JSON.parse(request.body, symbolize_names: true)
+    # require 'pry'; binding.pry
   end
 end

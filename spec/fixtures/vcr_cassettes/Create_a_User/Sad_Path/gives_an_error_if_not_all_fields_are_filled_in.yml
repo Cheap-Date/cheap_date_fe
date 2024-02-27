@@ -1,22 +1,26 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/1
+    method: post
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tiger@gmail.com&user%5Bname%5D=&user%5Bpassword%5D=golf123
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 401
+      message: Unauthorized
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -32,21 +36,19 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"9e6a48d157d5cc49f29e90d601f574d9"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 14a46b2e-0bc0-485e-8b7a-e56dc957de0b
+      - 612d630c-31f6-4118-b6f4-dadfe0b9873e
       X-Runtime:
-      - '0.029558'
+      - '0.228144'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.58, instantiation.active_record;dur=0.22,
-        process_action.action_controller;dur=19.70
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.05, transaction.active_record;dur=0.95,
+        process_action.action_controller;dur=225.05
       Content-Length:
-      - '159'
+      - '62'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:20 GMT
+      string: '{"name":["can''t be blank"],"email":["has already been taken"]}'
+  recorded_at: Tue, 27 Feb 2024 00:17:25 GMT
 recorded_with: VCR 6.2.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:3000/api/v1/find_by_email
     body:
       encoding: UTF-8
-      string: '{"email":"tiger@gmail.com","password":"golf123"}'
+      string: '{"email":"tdiger@gmtail.colm","password":"golf123"}'
     headers:
       User-Agent:
       - Faraday v2.9.0
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,21 +34,19 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"e390cdec750b2d3a0837599eaae05837"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 81ae219b-e245-4ce0-959c-8f0b8264c1bd
+      - e9faa5ca-520e-4150-b137-27ae45861a3e
       X-Runtime:
-      - '0.227263'
+      - '0.003700'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.17, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.96
       Content-Length:
-      - '215'
+      - '69'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:20 GMT
+      string: '{"error":"This email is not associated with an account","status":404}'
+  recorded_at: Tue, 27 Feb 2024 00:17:24 GMT
 recorded_with: VCR 6.2.0

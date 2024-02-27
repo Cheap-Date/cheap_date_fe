@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/users/:id/edit", to: "users#edit"
   patch "/users/:id", to: "users#update"
   
-  get "/users/:id/dates", to: "dates#index"
+  get "/users/:id/meetups", to: "dates#index"
   get "/users/:id/dates/new", to: "dates#new"
   post "/users/:id/meetups", to: "dates#create"
 

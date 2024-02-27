@@ -11,15 +11,17 @@ class DatesController < ApplicationController
   def create
     @user = UserFacade.new.user(params[:id])
     if meetup_params
-      response = MeetupFacade.create_meetup(params[:name], params[:date], params[:time], params[:description], params[:first_date], @user.id)
-    require 'pry'; binding.pry
+      response = MeetupFacade.create_meetup(params[:title], params[:location], params[:start_time], params[:end_time], params[:first_date], @user.id)
+      if response.status == 201
+        redirect_to "/users/#{@user.id}/meetups"
+      end
     end
-    # require 'pry'; binding.pry
+    
   end
 
   private
 
   def meetup_params
-    params.permit(:name, :date, :time, :description, :first_date, :id)
+    params.permit(:title, :location, :start_time, :end_time, :first_date, :id)
   end
 end

@@ -1,215 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:3000/api/v1/find_by_email
-    body:
-      encoding: UTF-8
-      string: '{"email":"tiger@gmail.com","password":"golf123"}'
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"e390cdec750b2d3a0837599eaae05837"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7920e248-72f0-4328-a5b5-fddcf15a9df3
-      X-Runtime:
-      - '0.228778'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=225.85
-      Content-Length:
-      - '215'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"e390cdec750b2d3a0837599eaae05837"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 9f95becc-b379-472e-9c38-4980907b0644
-      X-Runtime:
-      - '0.005034'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.81
-      Content-Length:
-      - '215'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"b3ad2b2a3ecb95a15031d4dd6c167244"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7ca10f43-ddce-41d2-85d1-73cd8d5f2299
-      X-Runtime:
-      - '0.004960'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.23
-      Content-Length:
-      - '254'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"b3ad2b2a3ecb95a15031d4dd6c167244"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ee556ad8-8dc0-425d-957c-fef1a9d01cb8
-      X-Runtime:
-      - '0.004536'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.22, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.72
-      Content-Length:
-      - '254'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
-- request:
     method: post
-    uri: http://localhost:3000/api/v1/users/3/meetups
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=camilla_effertz@kertzmann.test&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
-      string: '{"title":"Beau Joes Pizza Date","location":"Beau Joes in Idaho Springs,
-        CO","start_time":"7:00pm","end_time":"9:00pm","first_date":"True","id":"3"}'
+      string: ''
     headers:
       User-Agent:
       - Faraday v2.9.0
       Content-Type:
       - application/json
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -234,27 +37,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"5fcc2448cadd96116615d383864e1675"
+      - W/"358f9b7323698f84f2eb95a7acc1fcb2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c44f51e1-6d0b-4f3d-8c50-9bc89fe6729c
+      - 63af38c2-ce0d-49ba-8e56-34a23667328f
       X-Runtime:
-      - '0.006774'
+      - '0.232123'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.46, instantiation.active_record;dur=0.03,
-        unpermitted_parameters.action_controller;dur=0.00, transaction.active_record;dur=1.19,
-        process_action.action_controller;dur=3.75
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=2.05, transaction.active_record;dur=2.15,
+        process_action.action_controller;dur=228.49
       Content-Length:
-      - '185'
+      - '232'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"8","type":"meetup","attributes":{"title":"Beau Joes
-        Pizza Date","location":"Beau Joes in Idaho Springs, CO","start_time":"7:00pm","end_time":"9:00pm","first_date":true}}}'
+      string: '{"id":56,"name":"Tiger Woods","email":"camilla_effertz@kertzmann.test","password_digest":"$2a$12$XpG2IwuBuXnAtKzEJOTxhOqkTPeU1O1hTZ2XDpG0r3ES9.vVYvYQi","created_at":"2024-02-27T00:17:23.587Z","updated_at":"2024-02-27T00:17:23.587Z"}'
   recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/3
+    uri: http://localhost:3000/api/v1/users/56
     body:
       encoding: US-ASCII
       string: ''
@@ -285,20 +86,218 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"801f9d99c8d142f02e78229744b64e6f"
+      - W/"0b31c0b40ec6398cfeaeddf81b0a9902"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 84dbe9ed-9784-480f-9e6a-0e18afd17863
+      - 8cb28f22-af19-4e8d-a129-020cea903cbd
       X-Runtime:
-      - '0.011521'
+      - '0.004196'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=2.73, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=7.01
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.44
       Content-Length:
-      - '281'
+      - '151'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"},{"id":"8","type":"meetup"}]}}}}'
+      string: '{"data":{"id":"56","type":"user","attributes":{"name":"Tiger Woods","email":"camilla_effertz@kertzmann.test"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/56
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0b31c0b40ec6398cfeaeddf81b0a9902"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 41d46cf6-47c9-4ff6-99fa-f7073cf596e0
+      X-Runtime:
+      - '0.003978'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.25, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.36
+      Content-Length:
+      - '151'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"56","type":"user","attributes":{"name":"Tiger Woods","email":"camilla_effertz@kertzmann.test"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/56
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"0b31c0b40ec6398cfeaeddf81b0a9902"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1cac0658-8eda-4e31-aec7-491d7282574a
+      X-Runtime:
+      - '0.004198'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.39
+      Content-Length:
+      - '151'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"56","type":"user","attributes":{"name":"Tiger Woods","email":"camilla_effertz@kertzmann.test"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/56
+    body:
+      encoding: UTF-8
+      string: '{"name":"Patrick Mahomes","email":"angelo_ziemann@orn.test","password":"football123"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f11b437843654168c437313c0afe5e9c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37bb2d4c-12cd-43f9-9488-2cabfc76f050
+      X-Runtime:
+      - '0.006490'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.57, instantiation.active_record;dur=0.02,
+        transaction.active_record;dur=1.90, process_action.action_controller;dur=3.31
+      Content-Length:
+      - '229'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Patrick Mahomes","email":"angelo_ziemann@orn.test","id":56,"password_digest":"$2a$12$XpG2IwuBuXnAtKzEJOTxhOqkTPeU1O1hTZ2XDpG0r3ES9.vVYvYQi","created_at":"2024-02-27T00:17:23.587Z","updated_at":"2024-02-27T00:17:23.656Z"}'
+  recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/56
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"80ea62680fd37015256d89f879b88596"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a5d3a50d-09e9-4241-a41e-dabc26a957e4
+      X-Runtime:
+      - '0.004249'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.38
+      Content-Length:
+      - '148'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"56","type":"user","attributes":{"name":"Patrick Mahomes","email":"angelo_ziemann@orn.test"},"relationships":{"meetups":{"data":[]}}}}'
   recorded_at: Tue, 27 Feb 2024 00:17:23 GMT
 recorded_with: VCR 6.2.0

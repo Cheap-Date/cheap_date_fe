@@ -2,15 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/find_by_email
+    uri: http://localhost:3000/api/v1/users/1
     body:
-      encoding: UTF-8
-      string: '{"email":"tiger@gmail.com","password":"golf123"}'
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v2.9.0
-      Content-Type:
-      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -35,20 +33,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"e390cdec750b2d3a0837599eaae05837"
+      - W/"9e6a48d157d5cc49f29e90d601f574d9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 81ae219b-e245-4ce0-959c-8f0b8264c1bd
+      - 7d343fd8-6919-4df8-9693-f966157fe74d
       X-Runtime:
-      - '0.227263'
+      - '0.004320'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.16, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.22
       Content-Length:
-      - '215'
+      - '159'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 00:17:20 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 00:17:27 GMT
 recorded_with: VCR 6.2.0
