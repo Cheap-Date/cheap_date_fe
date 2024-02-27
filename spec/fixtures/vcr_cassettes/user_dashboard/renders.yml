@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 97e4923a-a94f-4651-b460-f89a26b47506
+      - 64267afc-9e2e-44b6-9d60-0c9a5d9b5f12
       X-Runtime:
-      - '0.229662'
+      - '0.227924'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=226.76
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.47, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=225.08
       Content-Length:
       - '271'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:09:56 GMT
+  recorded_at: Tue, 27 Feb 2024 15:27:12 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,18 +88,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dc92b873-034f-4938-8316-e26fbe944506
+      - 4e42ffec-31b8-41f5-a82d-9ebc128f4911
       X-Runtime:
-      - '0.004404'
+      - '0.004573'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.25, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.24
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.32
       Content-Length:
       - '271'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:09:56 GMT
+  recorded_at: Tue, 27 Feb 2024 15:27:12 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/1
@@ -137,16 +137,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 21b6f073-358d-42d4-903a-4c8a7bbc7659
+      - 9be874f2-73bf-433f-b7ef-a2e06996cea6
       X-Runtime:
-      - '0.004024'
+      - '0.004375'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.28
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.66
       Content-Length:
       - '159'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:09:56 GMT
+  recorded_at: Tue, 27 Feb 2024 15:27:12 GMT
 recorded_with: VCR 6.2.0

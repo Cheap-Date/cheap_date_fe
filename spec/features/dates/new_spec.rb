@@ -32,5 +32,23 @@ RSpec.describe "Create Date", type: :feature do
       expect(page).to have_content("Tiger Woods's Dates")
       expect(page).to have_content("Beau Joes Pizza Date")
     end
+
+    #Sad Path
+    it "should give an error if not all fields are filled in" do
+      visit "/users/3/dates/new"
+
+      fill_in :title, with: ""
+      fill_in :location, with: "Beau Joes in Idaho Springs, CO"
+      fill_in :start_time, with: "7:00pm"
+      fill_in :end_time, with: "9:00pm"
+      # fill_in :first_date, with: "True"
+      expect(page).to have_button("Create Date")
+
+      click_button "Create Date" 
+
+      expect(page).to have_content("Please fill in all fields")
+
+      expect(current_path).to eq("/users/3/dates/new")
+    end
   end
 end
