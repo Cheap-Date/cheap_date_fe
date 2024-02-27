@@ -17,7 +17,7 @@ RSpec.describe "user dates index", type: :feature do
       expect(page).to have_content("Tiger Woods's Dates")
     end
 
-    it "has a button to edit each date, it do", :vcr do# need date object to implement 100%
+    it "has a button to edit each date, it do", :vcr do
       visit "/users/3/meetups"
 
       expect(page).to have_button("Edit Date")
