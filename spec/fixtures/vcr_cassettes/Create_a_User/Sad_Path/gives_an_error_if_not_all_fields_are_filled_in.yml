@@ -35,20 +35,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c6da8ef9-5e2a-4d9f-9651-fadf7e876498
+      - f3718990-5085-4374-84e3-b3b348b171d7
       X-Runtime:
-      - '0.226765'
+      - '0.244263'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.23, transaction.active_record;dur=0.87,
-        process_action.action_controller;dur=223.85
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.12, transaction.active_record;dur=0.97,
+        process_action.action_controller;dur=241.61
       Content-Length:
       - '62'
     body:
       encoding: UTF-8
       string: '{"name":["can''t be blank"],"email":["has already been taken"]}'
-  recorded_at: Tue, 27 Feb 2024 15:43:50 GMT
+  recorded_at: Tue, 27 Feb 2024 18:20:27 GMT
 recorded_with: VCR 6.2.0

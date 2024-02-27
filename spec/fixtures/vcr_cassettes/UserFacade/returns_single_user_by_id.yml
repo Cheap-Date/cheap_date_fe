@@ -31,22 +31,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Etag:
-      - W/"9e6a48d157d5cc49f29e90d601f574d9"
+      - W/"cd0652bd2dcbb6398d127bcf1dd2517d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 158f5320-6dc1-49a1-b3eb-ba8d4a957b6f
+      - 61412a32-fe56-4599-82d3-f9f2519354b0
       X-Runtime:
-      - '0.011655'
+      - '0.127686'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.87, instantiation.active_record;dur=0.17,
-        process_action.action_controller;dur=5.43
+      - sql.active_record;dur=57.17, start_processing.action_controller;dur=0.00,
+        instantiation.active_record;dur=4.30, process_action.action_controller;dur=83.61
       Content-Length:
-      - '159'
+      - '151'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:45 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"armando_bogisich@kozey.test"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 18:20:24 GMT
 recorded_with: VCR 6.2.0

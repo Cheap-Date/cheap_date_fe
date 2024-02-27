@@ -35,22 +35,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 3c60b89f-a71f-4432-9e14-124cc33cf1f0
+      - a5cd9652-b665-44cb-ba7b-f0eb023e4ae0
       X-Runtime:
-      - '0.228885'
+      - '0.246453'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.96, transaction.active_record;dur=0.87,
-        process_action.action_controller;dur=225.92
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.88, transaction.active_record;dur=0.80,
+        process_action.action_controller;dur=243.94
       Content-Length:
       - '36'
     body:
       encoding: UTF-8
       string: '{"email":["has already been taken"]}'
-  recorded_at: Tue, 27 Feb 2024 15:43:50 GMT
+  recorded_at: Tue, 27 Feb 2024 18:20:28 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tiger@gmail.com&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
@@ -86,20 +86,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Vary:
-      - Accept
+      - Accept, Origin
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 7e0451a0-f9ab-4f41-846f-7e190ac44e7c
+      - f84c2ef4-bb6d-47d5-8971-e6d222937b07
       X-Runtime:
-      - '0.226972'
+      - '0.243546'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.09, transaction.active_record;dur=0.98,
-        process_action.action_controller;dur=224.09
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.27, transaction.active_record;dur=1.04,
+        process_action.action_controller;dur=241.16
       Content-Length:
       - '36'
     body:
       encoding: UTF-8
       string: '{"email":["has already been taken"]}'
-  recorded_at: Tue, 27 Feb 2024 15:43:50 GMT
+  recorded_at: Tue, 27 Feb 2024 18:20:28 GMT
 recorded_with: VCR 6.2.0
