@@ -14,23 +14,41 @@ RSpec.describe "Create Date", type: :feature do
       visit "/users/3/dates/new"
 
       expect(page).to have_content("Create a Date")
-      expect(page).to have_field(:name)
-      expect(page).to have_field(:date)
-      expect(page).to have_field(:time)
-      expect(page).to have_field(:description)
+      expect(page).to have_field(:title)
+      expect(page).to have_field(:location)
+      expect(page).to have_field(:start_time)
+      expect(page).to have_field(:end_time)
       expect(page).to have_field(:first_date)
 
-      fill_in :name, with: "Beau Joes"
-      fill_in :date, with: "3/12/2023"
-      fill_in :time, with: "7:00pm"
-      fill_in :description, with: "Pizza date"
+      fill_in :title, with: "Beau Joes Pizza Date"
+      fill_in :location, with: "Beau Joes in Idaho Springs, CO"
+      fill_in :start_time, with: "7:00pm"
+      fill_in :end_time, with: "9:00pm"
       # fill_in :first_date, with: "True"
       expect(page).to have_button("Create Date")
 
-      click_button "Create Date" #as far as I can get right now
+      click_button "Create Date" 
 
-      # expect(page).to have_content("Tiger Woods's Dates")
-      # expect(page).to have_content("Beau Joes")
+      expect(page).to have_content("Tiger Woods's Dates")
+      expect(page).to have_content("Beau Joes Pizza Date")
+    end
+
+    #Sad Path
+    it "should give an error if not all fields are filled in", :vcr do
+      visit "/users/3/dates/new"
+
+      fill_in :title, with: ""
+      fill_in :location, with: "Beau Joes in Idaho Springs, CO"
+      fill_in :start_time, with: "7:00pm"
+      fill_in :end_time, with: "9:00pm"
+      # fill_in :first_date, with: "True"
+      expect(page).to have_button("Create Date")
+
+      click_button "Create Date" 
+
+      expect(page).to have_content("Please fill in all fields")
+
+      expect(current_path).to eq("/users/3/dates/new")
     end
   end
 end
