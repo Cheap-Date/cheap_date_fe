@@ -1,13 +1,15 @@
 <h1><%= @user.name %>'s Dates</h1>
 
 <% @meetup_facade.each do |meetup| %>
-  <%= "Title: #{meetup.title}" %><br>
-  <%= "Location: #{meetup.location}" %><br>
-  <%= "Start Time: #{meetup.start_time}" %><br>
-  <%= "End Time: #{meetup.end_time}" %><br>
-  <%= "First Date: #{meetup.first_date}" %><br>
+  <section id="meetup-<%= meetup.id %>">
+    <%= "Title: #{meetup.title}" %><br>
+    <%= "Location: #{meetup.location}" %><br>
+    <%= "Start Time: #{meetup.start_time}" %><br>
+    <%= "End Time: #{meetup.end_time}" %><br>
+    <%= "First Date: #{meetup.first_date}" %><br>
 
-  <%= button_to "Edit Date", "/users/#{@user.id}/meetups/#{meetup.id}/edit", method: :get %><br>
+    <%= button_to "Edit Date", "/users/#{@user.id}/meetups/#{meetup.id}/edit", method: :get %><br>
+  </section>
 <% end %>
 
 <%= button_to "Create Date", "/users/#{@user.id}/dates/new", method: :get %>

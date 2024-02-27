@@ -21,6 +21,12 @@ RSpec.describe "user dates index", type: :feature do
       visit "/users/3/meetups"
 
       expect(page).to have_button("Edit Date")
+
+      within("#meetup-1") do
+        click_button("Edit Date")
+      end
+
+      expect(current_path).to eq "/users/3/meetups/1/edit"
     end
 
     it "has a button to create a date, it do", :vcr do
