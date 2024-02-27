@@ -25,6 +25,10 @@ class DatesController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   private
 
   def meetup_params

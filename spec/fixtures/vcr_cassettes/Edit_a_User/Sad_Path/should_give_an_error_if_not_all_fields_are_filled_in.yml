@@ -2,11 +2,7 @@
 http_interactions:
 - request:
     method: post
-
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=chelsie_miller@oconnell.example&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
-
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=somethingelse@tigers.tiger&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
-
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=somethingelse10@tigers.tiger&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -41,46 +37,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-
-      - W/"0a100104a5e52a3c8a063df8b8434d9e"
+      - W/"2a766ec288f23553a0862a7dcbdfd4b3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a2730728-3d61-4ab1-a1c3-78baf797e9ad
+      - e0195836-75b5-4d85-95b4-f340d40ec7b7
       X-Runtime:
-      - '0.229829'
+      - '0.230111'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.49, transaction.active_record;dur=1.63,
-        process_action.action_controller;dur=226.57
-
-      - W/"cbe6948b2f8556ef4304bd9b890510c0"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 05df6872-553d-4559-800f-7830e87275a5
-      X-Runtime:
-      - '0.242847'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.70, transaction.active_record;dur=2.00,
-        process_action.action_controller;dur=240.48
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.80, transaction.active_record;dur=2.26,
+        process_action.action_controller;dur=227.09
       Content-Length:
-      - '228'
+      - '231'
     body:
       encoding: UTF-8
-
-      string: '{"id":111,"name":"Tiger Woods","email":"chelsie_miller@oconnell.example","password_digest":"$2a$12$cXwFxKw1j28GBYT7dBQqX.jA6UteKxKfY4Xp2PTP0eOXfbZk9NXq.","created_at":"2024-02-27T15:43:49.007Z","updated_at":"2024-02-27T15:43:49.007Z"}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
+      string: '{"id":151,"name":"Tiger Woods","email":"somethingelse10@tigers.tiger","password_digest":"$2a$12$WHLmqo4iThPODqzssBT8uOqss8YcaLvZ8eSYrxiHsmmRJfoFtVVAa","created_at":"2024-02-27T18:40:19.702Z","updated_at":"2024-02-27T18:40:19.702Z"}'
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/111
-
-      string: '{"id":72,"name":"Tiger Woods","email":"somethingelse@tigers.tiger","password_digest":"$2a$12$cmjLVD0CN/IU3ySfY5paqOZxYNqRtTj0iTLYzNR43rKlOEc7u49PS","created_at":"2024-02-27T01:35:57.063Z","updated_at":"2024-02-27T01:35:57.063Z"}'
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-
+    uri: http://localhost:3000/api/v1/users/151
     body:
       encoding: US-ASCII
       string: ''
@@ -111,46 +86,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-
-      - W/"25440da4772ca029c0a58e5413cfb6ae"
+      - W/"235a846676b667bb813a695d474e981c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59c3a4f3-47a1-4a46-8177-ae32b978e470
+      - b53e981e-c414-4e4a-9f71-3c1be57b8365
       X-Runtime:
-      - '0.004475'
+      - '0.004576'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.53, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.59
-
-      - W/"a570e676f445e8566dcd88f75642cd17"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 75686fb9-ed29-4933-8410-ba0b33ba39e6
-      X-Runtime:
-      - '0.003565'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.39
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.19, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.13
       Content-Length:
-      - '147'
+      - '150'
     body:
       encoding: UTF-8
-
-      string: '{"data":{"id":"111","type":"user","attributes":{"name":"Tiger Woods","email":"chelsie_miller@oconnell.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
+      string: '{"data":{"id":"151","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse10@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/111
-
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-
+    uri: http://localhost:3000/api/v1/users/151
     body:
       encoding: US-ASCII
       string: ''
@@ -181,46 +135,25 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-
-      - W/"25440da4772ca029c0a58e5413cfb6ae"
+      - W/"235a846676b667bb813a695d474e981c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1a320102-9352-450a-bc3b-084cd81c7a9f
+      - ae95deab-21a5-40d8-832e-6af4f26b0a3b
       X-Runtime:
-      - '0.003933'
+      - '0.004070'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.27
-
-      - W/"a570e676f445e8566dcd88f75642cd17"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 879f285a-6ab2-45b7-9ec8-891c1485a03a
-      X-Runtime:
-      - '0.003629'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.35
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.32
       Content-Length:
-      - '147'
+      - '150'
     body:
       encoding: UTF-8
-
-      string: '{"data":{"id":"111","type":"user","attributes":{"name":"Tiger Woods","email":"chelsie_miller@oconnell.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
+      string: '{"data":{"id":"151","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse10@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/111
-
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-
+    uri: http://localhost:3000/api/v1/users/151
     body:
       encoding: US-ASCII
       string: ''
@@ -251,52 +184,28 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-
-      - W/"25440da4772ca029c0a58e5413cfb6ae"
+      - W/"235a846676b667bb813a695d474e981c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 45621278-a20f-42a6-8475-444f88f2591c
+      - 14bc676c-7894-4ad1-8ebf-3fca0299a65a
       X-Runtime:
-      - '0.004109'
+      - '0.004451'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.23, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.27
-
-      - W/"a570e676f445e8566dcd88f75642cd17"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - b7935b4c-df2d-44e3-81d2-59e50895530b
-      X-Runtime:
-      - '0.003467'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.35
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.68
       Content-Length:
-      - '147'
+      - '150'
     body:
       encoding: UTF-8
-
-      string: '{"data":{"id":"111","type":"user","attributes":{"name":"Tiger Woods","email":"chelsie_miller@oconnell.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
+      string: '{"data":{"id":"151","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse10@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/users/111
+    uri: http://localhost:3000/api/v1/users/151
     body:
       encoding: UTF-8
-      string: '{"name":"","email":"chelsie_miller@oconnell.example","password":""}'
-
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-- request:
-    method: patch
-    uri: http://localhost:3000/api/v1/users/72
-    body:
-      encoding: UTF-8
-      string: '{"name":"","email":"somethingelse@tigers.tiger","password":""}'
-
+      string: '{"name":"","email":"somethingelse10@tigers.tiger","password":""}'
     headers:
       User-Agent:
       - Faraday v2.9.0
@@ -328,37 +237,21 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-
-      - cbd8a19a-99e8-42dd-bd31-d5a7fd816605
+      - ab5486ff-d5ed-47eb-9cda-2b558f16e531
       X-Runtime:
-      - '0.005288'
+      - '0.008262'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.04, instantiation.active_record;dur=0.02,
-        transaction.active_record;dur=0.94, process_action.action_controller;dur=2.69
-
-      - c2c79900-03bb-4a38-9e2a-673e132fcccc
-      X-Runtime:
-      - '0.007537'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.81, instantiation.active_record;dur=0.01,
-        transaction.active_record;dur=0.79, process_action.action_controller;dur=5.54
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.73, instantiation.active_record;dur=0.02,
+        transaction.active_record;dur=3.41, process_action.action_controller;dur=5.57
       Content-Length:
       - '27'
     body:
       encoding: UTF-8
       string: '{"name":["can''t be blank"]}'
-
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/111
-
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/72
-
+    uri: http://localhost:3000/api/v1/users/151
     body:
       encoding: US-ASCII
       string: ''
@@ -389,38 +282,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-
-      - W/"25440da4772ca029c0a58e5413cfb6ae"
+      - W/"235a846676b667bb813a695d474e981c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 42711f5f-f13a-45d7-af05-37b01656c84c
+      - 1a976e72-ca7e-4abb-87f2-39b7a1c3d7b1
       X-Runtime:
-      - '0.004210'
+      - '0.004087'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.54
-
-      - W/"a570e676f445e8566dcd88f75642cd17"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 3090b2ed-046a-4aa7-88d9-0b76ff4b9e30
-      X-Runtime:
-      - '0.003898'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=1.60
-
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.37
       Content-Length:
-      - '147'
+      - '150'
     body:
       encoding: UTF-8
-
-      string: '{"data":{"id":"111","type":"user","attributes":{"name":"Tiger Woods","email":"chelsie_miller@oconnell.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:43:49 GMT
-
-      string: '{"data":{"id":"72","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 01:35:57 GMT
-
+      string: '{"data":{"id":"151","type":"user","attributes":{"name":"Tiger Woods","email":"somethingelse10@tigers.tiger"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 18:40:19 GMT
 recorded_with: VCR 6.2.0
