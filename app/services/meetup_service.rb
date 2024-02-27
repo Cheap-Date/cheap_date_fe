@@ -15,6 +15,5 @@ class MeetupService
 
     request = conn.get("/api/v1/users/#{id}/meetups")
     json = JSON.parse(request.body)
-    # require 'pry'; binding.pry
   end
 end
