@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f72fa756-2bc1-4948-a2f5-ce183283782f
+      - 6cf39807-b18f-4f56-9224-ea083f13f6ac
       X-Runtime:
-      - '0.226932'
+      - '0.227393'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.05
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.51, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=224.46
       Content-Length:
       - '327'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"},{"id":"27","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:41:57 GMT
+  recorded_at: Tue, 27 Feb 2024 15:43:52 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,16 +88,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86294bd3-a0ef-446e-9af6-b570b97d9291
+      - ac17f6f5-2681-4ee6-bce0-2b0a19f15b96
       X-Runtime:
-      - '0.004473'
+      - '0.003830'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.72
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.26, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.17
       Content-Length:
       - '327'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"},{"id":"27","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:41:57 GMT
+  recorded_at: Tue, 27 Feb 2024 15:43:52 GMT
 recorded_with: VCR 6.2.0

@@ -37,16 +37,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ebeb2962-59e8-44c7-b7c6-3549089482c1
+      - de5f9a44-1605-49bf-be41-2c364b4e654e
       X-Runtime:
-      - '0.004233'
+      - '0.004403'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.24, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.39
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.19, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.38
       Content-Length:
       - '159'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"karine.funk@king-mclaughlin.example"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:41:57 GMT
+  recorded_at: Tue, 27 Feb 2024 15:43:52 GMT
 recorded_with: VCR 6.2.0
