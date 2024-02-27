@@ -37,16 +37,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 61412a32-fe56-4599-82d3-f9f2519354b0
+      - aee7c586-eca4-4f84-a49c-c3812b576afe
       X-Runtime:
-      - '0.127686'
+      - '0.147686'
       Server-Timing:
-      - sql.active_record;dur=57.17, start_processing.action_controller;dur=0.00,
-        instantiation.active_record;dur=4.30, process_action.action_controller;dur=83.61
+      - sql.active_record;dur=72.33, start_processing.action_controller;dur=0.00,
+        instantiation.active_record;dur=4.46, process_action.action_controller;dur=74.18
       Content-Length:
       - '151'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"armando_bogisich@kozey.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:20:24 GMT
+  recorded_at: Tue, 27 Feb 2024 19:54:01 GMT
 recorded_with: VCR 6.2.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=somfedthing@golf.sports&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=something110@golf.sports&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -37,25 +37,25 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"f7c59c7506fad218a2e3e9322aec1ca0"
+      - W/"55dc3a6150f2da273eb93c27ace95fbc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6d9a3845-a586-4c4a-a546-0aa6dc14142e
+      - c5bb0f7e-5f8d-4098-9c05-59cff8acea8a
       X-Runtime:
-      - '0.257565'
+      - '0.257884'
       Server-Timing:
-      - start_processing.action_controller;dur=0.03, sql.active_record;dur=3.81, transaction.active_record;dur=4.14,
-        process_action.action_controller;dur=248.99
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=13.14,
+        transaction.active_record;dur=13.66, process_action.action_controller;dur=255.38
       Content-Length:
-      - '225'
+      - '226'
     body:
       encoding: UTF-8
-      string: '{"id":79,"name":"Tiger Woods","email":"somfedthing@golf.sports","password_digest":"$2a$12$b8gLagwKjiKIjf9PDnsBWu2JvL/jZDx.vrRqrOpqiRH.iUdMz69vq","created_at":"2024-02-27T18:24:48.799Z","updated_at":"2024-02-27T18:24:48.799Z"}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"id":83,"name":"Tiger Woods","email":"something110@golf.sports","password_digest":"$2a$12$2M.3CXC7xRkxEm60RqjHKOzpv/QCixxrGSSihNUlhBxuz1LuxFL4W","created_at":"2024-02-27T19:54:03.868Z","updated_at":"2024-02-27T19:54:03.868Z"}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/79
+    uri: http://localhost:3000/api/v1/users/83
     body:
       encoding: US-ASCII
       string: ''
@@ -86,25 +86,25 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"c56b2eb568a6b263e866dd8dcabb18dd"
+      - W/"97c94070860e276eeb634b32d5a8883a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '01728465-8751-4e58-a8dd-9689d71e5717'
+      - b0ec236b-5e8e-48dd-a232-8630711ab8e3
       X-Runtime:
-      - '0.004774'
+      - '0.004287'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.07,
-        process_action.action_controller;dur=1.85
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.21, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.32
       Content-Length:
-      - '144'
+      - '145'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"79","type":"user","attributes":{"name":"Tiger Woods","email":"somfedthing@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"data":{"id":"83","type":"user","attributes":{"name":"Tiger Woods","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/79
+    uri: http://localhost:3000/api/v1/users/83
     body:
       encoding: US-ASCII
       string: ''
@@ -135,25 +135,25 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"c56b2eb568a6b263e866dd8dcabb18dd"
+      - W/"97c94070860e276eeb634b32d5a8883a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2e315b70-47dc-4721-aaf9-ac40b0bb9668
+      - 1228c5cd-da5c-45c9-84bc-afc12b713ece
       X-Runtime:
-      - '0.003491'
+      - '0.003673'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.20, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.20
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.21, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.35
       Content-Length:
-      - '144'
+      - '145'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"79","type":"user","attributes":{"name":"Tiger Woods","email":"somfedthing@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"data":{"id":"83","type":"user","attributes":{"name":"Tiger Woods","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/79
+    uri: http://localhost:3000/api/v1/users/83
     body:
       encoding: US-ASCII
       string: ''
@@ -184,28 +184,28 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"c56b2eb568a6b263e866dd8dcabb18dd"
+      - W/"97c94070860e276eeb634b32d5a8883a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0bd9e931-6f65-4794-adac-78dd595f6cbe
+      - bf8326b6-ea8a-449b-9bb6-ad931a907354
       X-Runtime:
-      - '0.003927'
+      - '0.003684'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.50
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.20, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.19
       Content-Length:
-      - '144'
+      - '145'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"79","type":"user","attributes":{"name":"Tiger Woods","email":"somfedthing@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"data":{"id":"83","type":"user","attributes":{"name":"Tiger Woods","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/users/79
+    uri: http://localhost:3000/api/v1/users/83
     body:
       encoding: UTF-8
-      string: '{"name":"Patrick Mahomes","email":"somfedthing@golf.sports","password":"football123"}'
+      string: '{"name":"Patrick Mahomes","email":"something110@golf.sports","password":"football123"}'
     headers:
       User-Agent:
       - Faraday v2.9.0
@@ -235,26 +235,25 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"ed202d87375afb2c381b90fc65e388f6"
+      - W/"43b0bc6247026bd34e8ed2cc85e43512"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3d0fa58e-5864-4aab-b093-d4b68f7f3b71
+      - fe50b2c9-9a05-4eec-b14f-906203b263e9
       X-Runtime:
-      - '0.016756'
+      - '0.008431'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=12.60,
-        instantiation.active_record;dur=0.02, transaction.active_record;dur=13.05,
-        process_action.action_controller;dur=14.59
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=4.25, instantiation.active_record;dur=0.02,
+        transaction.active_record;dur=4.89, process_action.action_controller;dur=6.27
       Content-Length:
-      - '229'
+      - '230'
     body:
       encoding: UTF-8
-      string: '{"name":"Patrick Mahomes","email":"somfedthing@golf.sports","id":79,"password_digest":"$2a$12$b8gLagwKjiKIjf9PDnsBWu2JvL/jZDx.vrRqrOpqiRH.iUdMz69vq","created_at":"2024-02-27T18:24:48.799Z","updated_at":"2024-02-27T18:24:48.882Z"}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"name":"Patrick Mahomes","email":"something110@golf.sports","id":83,"password_digest":"$2a$12$2M.3CXC7xRkxEm60RqjHKOzpv/QCixxrGSSihNUlhBxuz1LuxFL4W","created_at":"2024-02-27T19:54:03.868Z","updated_at":"2024-02-27T19:54:03.950Z"}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/79
+    uri: http://localhost:3000/api/v1/users/83
     body:
       encoding: US-ASCII
       string: ''
@@ -285,20 +284,20 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"b825267b7eea75ce93ec477fb7d06ac6"
+      - W/"40e0debebcedf56ca6413ab73bfa3a6e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 230e1b5d-7e5c-45db-a865-104aea153cbe
+      - 29f7755d-c5cb-4fe4-82ad-cfd0e134f94e
       X-Runtime:
-      - '0.006883'
+      - '0.003249'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.37
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.24, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.18
       Content-Length:
-      - '148'
+      - '149'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"79","type":"user","attributes":{"name":"Patrick Mahomes","email":"somfedthing@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:24:48 GMT
+      string: '{"data":{"id":"83","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Tue, 27 Feb 2024 19:54:03 GMT
 recorded_with: VCR 6.2.0

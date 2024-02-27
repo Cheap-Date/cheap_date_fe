@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c5d6ec65-4f8f-4a4b-9682-ac9b841cf6bf
+      - 53155672-5f03-4a99-862d-b96b141b6590
       X-Runtime:
-      - '0.243265'
+      - '0.241267'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.42, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=240.87
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=238.81
       Content-Length:
       - '135'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 18:20:30 GMT
+  recorded_at: Tue, 27 Feb 2024 19:54:08 GMT
 recorded_with: VCR 6.2.0

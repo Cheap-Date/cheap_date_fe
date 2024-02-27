@@ -6,7 +6,7 @@ RSpec.describe "Edit a User" do
       visit "/register"
 
       fill_in :name, with: "Tiger Woods"
-      fill_in :email, with: "somfedthing@golf.sports" # Generate a unique email
+      fill_in :email, with: "something110@golf.sports" # Generate a unique email
       fill_in :password, with: "golf123"
       fill_in :password_confirmation, with: "golf123"
 
@@ -25,7 +25,7 @@ RSpec.describe "Edit a User" do
       expect(page).to have_button("Update Profile")
 
       fill_in :name, with: "Patrick Mahomes"
-      fill_in :email, with: "somfedthing@golf.sports" # Generate a unique email
+      fill_in :email, with: "something110@golf.sports" # Generate a unique email
       fill_in :password, with: "football123"
       fill_in :password_confirmation, with: "football123"
 
@@ -41,7 +41,7 @@ RSpec.describe "Edit a User" do
       visit "/register"
 
       fill_in :name, with: "Tiger Woods"
-      fill_in :email, with: "somethingpelse@tigers.tiger" # Generate a unique email
+      fill_in :email, with: "somethingelse10@tigers.tiger" # Generate a unique email
       fill_in :password, with: "golf123"
       fill_in :password_confirmation, with: "golf123"
 
