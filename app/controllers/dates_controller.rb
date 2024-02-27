@@ -15,9 +15,14 @@ class DatesController < ApplicationController
       response = MeetupFacade.create_meetup(params[:title], params[:location], params[:start_time], params[:end_time], params[:first_date], @user.id)
       if response.status == 201
         redirect_to "/users/#{@user.id}/meetups"
+      else 
+        flash[:error] = "Please fill in all fields"
+        redirect_to "/users/#{@user.id}/dates/new"
       end
+    else 
+      flash[:error] = "Please fill in all fields"
+      redirect_to "/users/#{@user.id}/dates/new"
     end
-    
   end
 
   private

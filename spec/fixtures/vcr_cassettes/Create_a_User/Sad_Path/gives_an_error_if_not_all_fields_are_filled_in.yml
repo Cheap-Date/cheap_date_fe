@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c4fc8efb-0ff8-453d-96b9-81757ff1c1b0
+      - 479b5e55-82ef-41b6-ac54-36479a8d44e5
       X-Runtime:
-      - '0.228953'
+      - '0.227507'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.93, transaction.active_record;dur=0.90,
-        process_action.action_controller;dur=225.31
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.08, transaction.active_record;dur=1.27,
+        process_action.action_controller;dur=224.56
       Content-Length:
       - '62'
     body:
       encoding: UTF-8
       string: '{"name":["can''t be blank"],"email":["has already been taken"]}'
-  recorded_at: Tue, 27 Feb 2024 15:27:11 GMT
+  recorded_at: Tue, 27 Feb 2024 15:39:28 GMT
 recorded_with: VCR 6.2.0

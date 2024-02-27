@@ -35,22 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1a16fcbca7f5648afc48413c08f7d711"
+      - W/"6325f7c6916fb60134538e4a85fc9db4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2a460b34-f6b9-476b-b391-90dde926cbbc
+      - 314146f3-cde6-44b5-be39-257afd4f257d
       X-Runtime:
-      - '0.226838'
+      - '0.229744'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.01
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=226.91
       Content-Length:
-      - '271'
+      - '299'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:27:13 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:29 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -84,22 +84,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1a16fcbca7f5648afc48413c08f7d711"
+      - W/"6325f7c6916fb60134538e4a85fc9db4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8c64efad-8244-4b9d-b7d7-5b67573edfef
+      - 4287aa53-5f4d-4b6a-b09c-a129bcf8568e
       X-Runtime:
-      - '0.004300'
+      - '0.004063'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.33
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.25, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.25
       Content-Length:
-      - '271'
+      - '299'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:27:13 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:29 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -133,20 +133,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1a16fcbca7f5648afc48413c08f7d711"
+      - W/"6325f7c6916fb60134538e4a85fc9db4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4a0bb154-3947-4ae3-93e6-45f88b25e220
+      - b8ff24de-ec0d-48f4-826b-70795d8a273a
       X-Runtime:
-      - '0.004473'
+      - '0.004235'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.42
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.26
       Content-Length:
-      - '271'
+      - '299'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 15:27:13 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:29 GMT
 recorded_with: VCR 6.2.0

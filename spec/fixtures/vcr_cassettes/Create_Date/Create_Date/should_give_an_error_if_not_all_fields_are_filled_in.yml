@@ -1,0 +1,299 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/find_by_email
+    body:
+      encoding: UTF-8
+      string: '{"email":"tiger@gmail.com","password":"golf123"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6325f7c6916fb60134538e4a85fc9db4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9afca0af-3cbf-4092-8f2f-2019b305a7ac
+      X-Runtime:
+      - '0.235597'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=232.66
+      Content-Length:
+      - '299'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6325f7c6916fb60134538e4a85fc9db4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 25f8d040-ea54-4130-a74e-06f9ad41f0c3
+      X-Runtime:
+      - '0.004142'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.32
+      Content-Length:
+      - '299'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"4","type":"meetup"},{"id":"14","type":"meetup"},{"id":"15","type":"meetup"},{"id":"21","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"23c368dcf38facac1bd2783965bc012c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 17e4ea07-9a56-462b-8321-a04cfdfe7c03
+      X-Runtime:
+      - '0.004260'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.56
+      Content-Length:
+      - '700'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"},{"id":"8","type":"meetup"},{"id":"9","type":"meetup"},{"id":"10","type":"meetup"},{"id":"11","type":"meetup"},{"id":"12","type":"meetup"},{"id":"13","type":"meetup"},{"id":"16","type":"meetup"},{"id":"17","type":"meetup"},{"id":"18","type":"meetup"},{"id":"19","type":"meetup"},{"id":"20","type":"meetup"},{"id":"22","type":"meetup"},{"id":"23","type":"meetup"},{"id":"24","type":"meetup"},{"id":"25","type":"meetup"},{"id":"26","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"23c368dcf38facac1bd2783965bc012c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 565239a2-a123-4871-b9a5-5abd3224e037
+      X-Runtime:
+      - '0.004258'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.51
+      Content-Length:
+      - '700'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"},{"id":"8","type":"meetup"},{"id":"9","type":"meetup"},{"id":"10","type":"meetup"},{"id":"11","type":"meetup"},{"id":"12","type":"meetup"},{"id":"13","type":"meetup"},{"id":"16","type":"meetup"},{"id":"17","type":"meetup"},{"id":"18","type":"meetup"},{"id":"19","type":"meetup"},{"id":"20","type":"meetup"},{"id":"22","type":"meetup"},{"id":"23","type":"meetup"},{"id":"24","type":"meetup"},{"id":"25","type":"meetup"},{"id":"26","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/users/3/meetups
+    body:
+      encoding: UTF-8
+      string: '{"title":"","location":"Beau Joes in Idaho Springs, CO","start_time":"7:00pm","end_time":"9:00pm","first_date":"True","id":"3"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d730704b-2665-4068-9e66-850c96103904
+      X-Runtime:
+      - '0.004057'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.16, instantiation.active_record;dur=0.02,
+        unpermitted_parameters.action_controller;dur=0.00, process_action.action_controller;dur=1.30
+      Content-Length:
+      - '34'
+    body:
+      encoding: UTF-8
+      string: '{"error":["Title can''t be blank"]}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"23c368dcf38facac1bd2783965bc012c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 757a50e0-e279-4095-af7c-77d138e988a8
+      X-Runtime:
+      - '0.004103'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.20, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.27
+      Content-Length:
+      - '700'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"bess.hills@donnelly.example"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"5","type":"meetup"},{"id":"6","type":"meetup"},{"id":"7","type":"meetup"},{"id":"8","type":"meetup"},{"id":"9","type":"meetup"},{"id":"10","type":"meetup"},{"id":"11","type":"meetup"},{"id":"12","type":"meetup"},{"id":"13","type":"meetup"},{"id":"16","type":"meetup"},{"id":"17","type":"meetup"},{"id":"18","type":"meetup"},{"id":"19","type":"meetup"},{"id":"20","type":"meetup"},{"id":"22","type":"meetup"},{"id":"23","type":"meetup"},{"id":"24","type":"meetup"},{"id":"25","type":"meetup"},{"id":"26","type":"meetup"}]}}}}'
+  recorded_at: Tue, 27 Feb 2024 15:39:26 GMT
+recorded_with: VCR 6.2.0

@@ -34,7 +34,7 @@ RSpec.describe "Create Date", type: :feature do
     end
 
     #Sad Path
-    it "should give an error if not all fields are filled in" do
+    it "should give an error if not all fields are filled in", :vcr do
       visit "/users/3/dates/new"
 
       fill_in :title, with: ""
