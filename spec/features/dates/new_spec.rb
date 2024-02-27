@@ -10,7 +10,7 @@ RSpec.describe "Create Date", type: :feature do
       click_button "Log In"
     end
 
-    it "should see a form to create a date" do
+    it "should see a form to create a date", :vcr do
       visit "/users/3/dates/new"
 
       expect(page).to have_content("Create a Date")
