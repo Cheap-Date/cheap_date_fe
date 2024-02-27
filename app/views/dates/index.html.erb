@@ -5,9 +5,11 @@
   <%= "Location: #{meetup.location}" %><br>
   <%= "Start Time: #{meetup.start_time}" %><br>
   <%= "End Time: #{meetup.end_time}" %><br>
-  <%= "First Date: #{meetup.first_date}" %><br><br>
+  <%= "First Date: #{meetup.first_date}" %><br>
+
+  <%= button_to "Edit Date", "/users/#{@user.id}/meetups/#{meetup.id}/edit", method: :get %><br>
 <% end %>
 
 <%= button_to "Create Date", "/users/#{@user.id}/dates/new", method: :get %>
 
-<%= button_to "Edit Date", method: :get %>
+
