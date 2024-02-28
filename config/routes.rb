@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root "welcome#index"
+
+  # OAuth Callback Route
+  get '/auth/:provider/callback', to: 'sessions#omniauth_log_in'
   
   get "/login", to: "users#login_form"
   post "/login", to: "users#login_user"
