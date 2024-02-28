@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    def omniauth_log_in
+    def omniauth_log_in # How do we test for this?
         user_info = request.env['omniauth.auth'][:info]
         
         user = UserFacade.new.find_by_email(user_info[:email])
@@ -13,8 +13,5 @@ class SessionsController < ApplicationController
             flash[:success] = "Welcome, #{user.name}!"
             redirect_to "/users/#{user.id}"
         end
-        
-        # user = UserFacade.from_omniauth
-
     end
 end
