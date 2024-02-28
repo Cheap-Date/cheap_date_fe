@@ -35,22 +35,22 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"6a0564176c222e11368a2f5d935ec477"
+      - W/"9240ebd8ce7f85afb56cf65f8ad3581a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ded5a191-d190-4d17-a7e6-3acb4936cd1a
+      - 7c7222d5-9b28-4a8a-b1c4-47790006c53e
       X-Runtime:
-      - '0.227813'
+      - '0.227542'
       Server-Timing:
       - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.81
+        process_action.action_controller;dur=224.44
       Content-Length:
-      - '188'
+      - '215'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Wed, 28 Feb 2024 00:14:28 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"7","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 02:30:58 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -84,22 +84,22 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"6a0564176c222e11368a2f5d935ec477"
+      - W/"9240ebd8ce7f85afb56cf65f8ad3581a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1cfe13f5-d5a1-45d1-8adf-462ed9e31c54
+      - 9f699ca0-023a-49cd-9426-076ff7808d80
       X-Runtime:
-      - '0.005820'
+      - '0.006861'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.22
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.20, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.45
       Content-Length:
-      - '188'
+      - '215'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Wed, 28 Feb 2024 00:14:28 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"7","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 02:30:58 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -133,20 +133,20 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"6a0564176c222e11368a2f5d935ec477"
+      - W/"9240ebd8ce7f85afb56cf65f8ad3581a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cdcd9190-6fc0-4a62-a410-d8791aa541b9
+      - 0a81726c-2b76-4bb8-8103-9417c5771489
       X-Runtime:
-      - '0.004560'
+      - '0.004212'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.35
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.36
       Content-Length:
-      - '188'
+      - '215'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Wed, 28 Feb 2024 00:14:28 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"7","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 02:30:58 GMT
 recorded_with: VCR 6.2.0

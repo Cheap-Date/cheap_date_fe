@@ -1,6 +1,6 @@
 <h1>Edit an Existing Date</h1>
 
-<%= form_with url: "/users/meetups", method: :patch, local: true, data: { turbo: false } do |form| %>
+<%= form_with url: "/users/#{@user.id}/meetups/#{@meetup_facade.id}", method: :patch, local: true, data: { turbo: false } do |form| %>
   <%= form.label :title, "Title" %>
   <%= form.text_field :title, value: @meetup_facade.title %><br>
   <%= form.label :location, "Location" %>

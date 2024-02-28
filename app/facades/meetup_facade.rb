@@ -14,4 +14,10 @@ class MeetupFacade
     response = MeetupService.find_meetup_by_id(id, meetup_id)
     Meetup.new(response["data"]) if response["data"]
   end
+  
+  def self.update_meetup(update_meetup_params)
+    response = MeetupService.update_meetup(update_meetup_params)
+    # require 'pry'; binding.pry
+    Meetup.new(response["data"]) if response["data"]
+  end
 end
