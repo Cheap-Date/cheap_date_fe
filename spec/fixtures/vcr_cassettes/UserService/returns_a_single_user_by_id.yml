@@ -37,16 +37,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92a3fe2f-f33a-485e-aefb-651f7f1fcbbe
+      - a936a658-4061-46ce-9a22-493750992ade
       X-Runtime:
-      - '0.004644'
+      - '0.004612'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.22, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.52
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.19, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.31
       Content-Length:
       - '148'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Wed, 28 Feb 2024 17:12:26 GMT
+  recorded_at: Wed, 28 Feb 2024 17:43:06 GMT
 recorded_with: VCR 6.2.0

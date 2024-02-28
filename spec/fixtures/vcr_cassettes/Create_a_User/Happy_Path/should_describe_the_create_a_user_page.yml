@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tigadr0@woods.golf&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tigadr801@woods.golf&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -19,8 +19,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 201
+      message: Created
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,19 +36,70 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept, Origin
+      Etag:
+      - W/"f78ddd6e737048fff3be3301bdc5d9d2"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0cbf8e59-aabf-4219-920e-dfbc9dca930b
+      - db688224-cb23-4f98-96f3-82a838c1d748
       X-Runtime:
-      - '0.228219'
+      - '0.229036'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.06, transaction.active_record;dur=0.95,
-        process_action.action_controller;dur=225.08
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=2.08, transaction.active_record;dur=2.23,
+        process_action.action_controller;dur=225.98
       Content-Length:
-      - '36'
+      - '222'
     body:
       encoding: UTF-8
-      string: '{"email":["has already been taken"]}'
-  recorded_at: Wed, 28 Feb 2024 17:12:24 GMT
+      string: '{"id":13,"name":"Tiger Woods","email":"tigadr801@woods.golf","password_digest":"$2a$12$p3qrVtOJ0Du601gqDuoN.edeWAlAczbi.x8A5ytDafr/lsVmMGznC","created_at":"2024-02-28T17:43:03.491Z","updated_at":"2024-02-28T17:43:03.491Z"}'
+  recorded_at: Wed, 28 Feb 2024 17:43:03 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/13
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"bd05def8a1c69465df4263075ef1cfeb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5be2e4c7-baea-4383-8fb0-6f02b8ac67fe
+      X-Runtime:
+      - '0.004153'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.31
+      Content-Length:
+      - '141'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"13","type":"user","attributes":{"name":"Tiger Woods","email":"tigadr801@woods.golf"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:03 GMT
 recorded_with: VCR 6.2.0

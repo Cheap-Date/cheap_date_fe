@@ -26,7 +26,6 @@ class MeetupService
     conn = Faraday.new(url: "http://localhost:3000")
     
     conn.patch("/api/v1/users/#{update_meetup_params[:id]}/meetups/#{update_meetup_params[:meetup_id]}") do |request|
-      # require 'pry'; binding.pry
       request.headers['Content-Type'] = 'application/json'
       request.params = { title: update_meetup_params[:title], location: update_meetup_params[:location], start_time: update_meetup_params[:start_time], end_time: update_meetup_params[:end_time], id: update_meetup_params[:id], meetup_id: update_meetup_params[:meetup_id]}
     end

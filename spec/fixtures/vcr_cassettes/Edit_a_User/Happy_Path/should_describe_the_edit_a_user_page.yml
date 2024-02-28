@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=something113@golf.sports&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
+    uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=something1130@golf.sports&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
     body:
       encoding: UTF-8
       string: ''
@@ -19,8 +19,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 201
+      message: Created
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,19 +36,268 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept, Origin
+      Etag:
+      - W/"6a8e2b54bece60a09a2798bbac719a8e"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d5b121ba-9c0f-4d4f-9777-3bf1043b3e96
+      - 30e3d290-43eb-42b1-8c9e-f9f8a4304ed1
       X-Runtime:
-      - '0.228783'
+      - '0.228854'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.05, transaction.active_record;dur=0.94,
-        process_action.action_controller;dur=225.42
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.52, transaction.active_record;dur=1.88,
+        process_action.action_controller;dur=225.41
       Content-Length:
-      - '36'
+      - '227'
     body:
       encoding: UTF-8
-      string: '{"email":["has already been taken"]}'
-  recorded_at: Wed, 28 Feb 2024 17:12:23 GMT
+      string: '{"id":11,"name":"Tiger Woods","email":"something1130@golf.sports","password_digest":"$2a$12$/.6KZiCPJVM6RbXHMDgcruB5feXLWy5Qclu32Bo9N/egGVUaoWC82","created_at":"2024-02-28T17:43:02.435Z","updated_at":"2024-02-28T17:43:02.435Z"}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"d1f7851a592d7b0d72f13815695ee795"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02db899f-a683-40b8-80dd-3c0e01852ac8
+      X-Runtime:
+      - '0.004303'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.33
+      Content-Length:
+      - '146'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"11","type":"user","attributes":{"name":"Tiger Woods","email":"something1130@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"d1f7851a592d7b0d72f13815695ee795"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a555eb2e-253a-4836-b4f3-6b53e6fa82c7
+      X-Runtime:
+      - '0.004400'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.28
+      Content-Length:
+      - '146'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"11","type":"user","attributes":{"name":"Tiger Woods","email":"something1130@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"d1f7851a592d7b0d72f13815695ee795"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b59ce0cb-4e47-4fca-857c-9068ebfa2277
+      X-Runtime:
+      - '0.004378'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.55
+      Content-Length:
+      - '146'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"11","type":"user","attributes":{"name":"Tiger Woods","email":"something1130@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/users/11
+    body:
+      encoding: UTF-8
+      string: '{"name":"Patrick Mahomes","email":"something1130@golf.sports","password":"football123"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"9b2f12cf902e79498d91a824e64c39ae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1844a527-d6aa-454b-b17e-a73f032da2b0
+      X-Runtime:
+      - '0.006658'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.40, instantiation.active_record;dur=0.02,
+        transaction.active_record;dur=2.22, process_action.action_controller;dur=3.80
+      Content-Length:
+      - '231'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Patrick Mahomes","email":"something1130@golf.sports","id":11,"password_digest":"$2a$12$/.6KZiCPJVM6RbXHMDgcruB5feXLWy5Qclu32Bo9N/egGVUaoWC82","created_at":"2024-02-28T17:43:02.435Z","updated_at":"2024-02-28T17:43:02.515Z"}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"4f7fb8ea4258e5f71e551fb946befdff"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a2aa23a-d7cc-4662-ac83-f0846ef356eb
+      X-Runtime:
+      - '0.004511'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.76
+      Content-Length:
+      - '150'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"11","type":"user","attributes":{"name":"Patrick Mahomes","email":"something1130@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:02 GMT
 recorded_with: VCR 6.2.0

@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 2eb031fc-3d0d-4971-a112-73b6c50b4f2e
+      - 7ef1be21-54aa-4cc3-adf2-76b912cbe9af
       X-Runtime:
-      - '0.228596'
+      - '0.231001'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.91, transaction.active_record;dur=1.03,
-        process_action.action_controller;dur=225.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.01, transaction.active_record;dur=0.94,
+        process_action.action_controller;dur=227.67
       Content-Length:
       - '36'
     body:
       encoding: UTF-8
       string: '{"email":["has already been taken"]}'
-  recorded_at: Wed, 28 Feb 2024 17:12:24 GMT
+  recorded_at: Wed, 28 Feb 2024 17:43:04 GMT
 - request:
     method: post
     uri: http://localhost:3000/api/v1/users?user%5Bemail%5D=tiger@gmail.com&user%5Bname%5D=Tiger%20Woods&user%5Bpassword%5D=golf123
@@ -90,16 +90,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 1d1c9efb-faee-4b59-bdda-f3df7da30ded
+      - c57f215a-5244-48b5-874b-87f4fce3741c
       X-Runtime:
-      - '0.230584'
+      - '0.230749'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.10, transaction.active_record;dur=0.91,
-        process_action.action_controller;dur=227.38
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.06, transaction.active_record;dur=0.91,
+        process_action.action_controller;dur=227.58
       Content-Length:
       - '36'
     body:
       encoding: UTF-8
       string: '{"email":["has already been taken"]}'
-  recorded_at: Wed, 28 Feb 2024 17:12:24 GMT
+  recorded_at: Wed, 28 Feb 2024 17:43:04 GMT
 recorded_with: VCR 6.2.0
