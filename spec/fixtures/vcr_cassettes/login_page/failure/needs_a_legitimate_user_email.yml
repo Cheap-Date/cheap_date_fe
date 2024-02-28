@@ -37,16 +37,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4e60c7d0-a686-4e1b-bc39-7f84152539ab
+      - 4399d4f3-c75d-43c2-bb52-26533ed298a8
       X-Runtime:
-      - '0.003322'
+      - '0.003598'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.13, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=0.71
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.16, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.72
       Content-Length:
       - '69'
     body:
       encoding: UTF-8
       string: '{"error":"This email is not associated with an account","status":404}'
-  recorded_at: Tue, 27 Feb 2024 19:54:04 GMT
+  recorded_at: Wed, 28 Feb 2024 17:43:03 GMT
 recorded_with: VCR 6.2.0
