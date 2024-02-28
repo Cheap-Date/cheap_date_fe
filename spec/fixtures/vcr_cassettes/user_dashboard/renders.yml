@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10926654-990c-4d91-873b-dc122224b062
+      - 3253d0ef-303e-4fd9-a5ba-59e44da41288
       X-Runtime:
-      - '0.227575'
+      - '0.228142'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.54, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=224.64
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=224.95
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:18 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:27 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,18 +88,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5650e76e-f936-475a-bb60-1ee2e2e91a12
+      - 56e404a3-f4cc-4647-a794-a1928d893bad
       X-Runtime:
-      - '0.019420'
+      - '0.004693'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.34, instantiation.active_record;dur=0.05,
-        process_action.action_controller;dur=14.91
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.81, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.83
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:18 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:27 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/1
@@ -137,16 +137,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7cb9afe1-17aa-4f49-9afc-0c7ff3be5586
+      - c3cfdf2c-b2e3-413f-bda8-9c8bfa94609f
       X-Runtime:
-      - '0.004689'
+      - '0.004412'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.26, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.65
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.21, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.53
       Content-Length:
       - '148'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:18 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:27 GMT
 recorded_with: VCR 6.2.0

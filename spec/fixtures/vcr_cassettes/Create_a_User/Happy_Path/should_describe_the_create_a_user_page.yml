@@ -19,8 +19,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 401
+      message: Unauthorized
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -36,70 +36,19 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept, Origin
-      Etag:
-      - W/"2d43310f5ee592fa4e47f9f68eec5670"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 532fe578-9171-41b4-b472-0437498a4ea6
+      - cc0beea6-c298-445b-b0b9-17d7aabb7a84
       X-Runtime:
-      - '0.239430'
+      - '0.230997'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.78, transaction.active_record;dur=2.11,
-        process_action.action_controller;dur=233.35
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.17, transaction.active_record;dur=1.17,
+        process_action.action_controller;dur=227.77
       Content-Length:
-      - '219'
+      - '36'
     body:
       encoding: UTF-8
-      string: '{"id":7,"name":"Tiger Woods","email":"tigadr0@woods.golf","password_digest":"$2a$12$sJ/uagQxE/Ah50XNvh/XX.hj9bhUeSzvcubvgGCtu5foxcOMO/F3O","created_at":"2024-02-27T23:43:17.272Z","updated_at":"2024-02-27T23:43:17.272Z"}'
-  recorded_at: Tue, 27 Feb 2024 23:43:17 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/api/v1/users/7
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept, Origin
-      Etag:
-      - W/"45193ed9adc762d6fd30657b72362360"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 93e82b77-3605-4fd0-931b-e156506f50cc
-      X-Runtime:
-      - '0.004240'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.34
-      Content-Length:
-      - '138'
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"7","type":"user","attributes":{"name":"Tiger Woods","email":"tigadr0@woods.golf"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:17 GMT
+      string: '{"email":["has already been taken"]}'
+  recorded_at: Wed, 28 Feb 2024 00:14:25 GMT
 recorded_with: VCR 6.2.0

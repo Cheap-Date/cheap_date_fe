@@ -14,4 +14,11 @@ class MeetupService
     request = conn.get("/api/v1/users/#{id}/meetups")
     json = JSON.parse(request.body)
   end
+
+  def self.find_meetup_by_id(id, meetup_id)
+    conn = Faraday.new(url: "http://localhost:3000")
+
+    request = conn.get("/api/v1/users/#{id}/meetups/#{meetup_id}")
+    json = JSON.parse(request.body)
+  end
 end

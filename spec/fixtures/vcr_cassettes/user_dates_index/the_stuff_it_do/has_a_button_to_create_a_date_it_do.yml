@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 93b6d356-f77c-4b74-ae03-bfc162e0c31c
+      - 8ebd6b92-73a9-4f13-830e-14cbd95eb211
       X-Runtime:
-      - '0.231172'
+      - '0.229977'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=227.60
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=226.96
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:15 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:23 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,18 +88,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f094768c-9074-437d-bad7-c369cbcf4622
+      - 208c296c-72d0-4223-88c8-9cfcc8b8b42a
       X-Runtime:
-      - '0.016542'
+      - '0.004829'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=13.01
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.43
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:15 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:23 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/3
@@ -133,22 +133,22 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"63421424aa7ba6830fa6cbbc9fc21ba2"
+      - W/"7a2a94ae92306794ca41584e03ee17ec"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e5622b46-18cb-4f3d-be4e-6cb30718312f
+      - 22c96705-599b-4f60-85c0-58c1f62b1154
       X-Runtime:
-      - '0.004377'
+      - '0.004515'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.55
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.28
       Content-Length:
-      - '163'
+      - '217'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"tigadr@woods.golf"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:15 GMT
+      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Tiger Woods","email":"tigadr@woods.golf"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"4","type":"meetup"},{"id":"5","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 00:14:23 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/3/meetups
@@ -182,22 +182,24 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"e1481299475e8b48700ca56c42177106"
+      - W/"e57ddcbcb1a544b40cb354b985bcc231"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8d7898b-cd69-4761-aeb3-14633e62e669
+      - ffb297c2-74bf-4e43-b929-e37fd7b97c51
       X-Runtime:
-      - '0.004488'
+      - '0.003750'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=1.21
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=1.03
       Content-Length:
-      - '459'
+      - '813'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"meetup","attributes":{"title":"Beau Joes
         Pizza Date","location":"Beau Joes in Idaho Springs, CO","start_time":"7:00pm","end_time":"9:00pm","first_date":true}},{"id":"2","type":"meetup","attributes":{"title":"TEST","location":"Arvada,
-        CO","start_time":"18:36","end_time":"19:36","first_date":true}},{"id":"3","type":"meetup","attributes":{"title":"TEST","location":"TEST","start_time":"18:41","end_time":"20:41","first_date":true}}]}'
-  recorded_at: Tue, 27 Feb 2024 23:43:15 GMT
+        CO","start_time":"18:36","end_time":"19:36","first_date":true}},{"id":"3","type":"meetup","attributes":{"title":"TEST","location":"TEST","start_time":"18:41","end_time":"20:41","first_date":true}},{"id":"4","type":"meetup","attributes":{"title":"Beau
+        Joes Pizza Date","location":"Beau Joes in Idaho Springs, CO","start_time":"7:00pm","end_time":"9:00pm","first_date":true}},{"id":"5","type":"meetup","attributes":{"title":"Beau
+        Joes Pizza Date","location":"Beau Joes in Idaho Springs, CO","start_time":"7:00pm","end_time":"9:00pm","first_date":true}}]}'
+  recorded_at: Wed, 28 Feb 2024 00:14:24 GMT
 recorded_with: VCR 6.2.0

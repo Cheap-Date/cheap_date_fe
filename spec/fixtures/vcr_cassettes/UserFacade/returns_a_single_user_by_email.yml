@@ -33,23 +33,26 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"94789407294988d29fd87551e60ef40d"
+      - W/"64422e159be5ac2e242366598cd0c484"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8072e490-bd1d-4812-ae09-294e3ed0c825
+      - 2c9f5b10-40a5-46e1-8173-a42e4337675e
       X-Runtime:
-      - '0.022600'
+      - '0.049397'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=12.76,
-        instantiation.active_record;dur=0.05, process_action.action_controller;dur=19.16
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=26.71,
+        instantiation.active_record;dur=0.12, process_action.action_controller;dur=44.19
       Content-Length:
-      - '625'
+      - '1089'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}},{"id":"2","type":"user","attributes":{"name":"Tiger
         Woods","email":"somethingelse10@tigers.tiger"},"relationships":{"meetups":{"data":[]}}},{"id":"3","type":"user","attributes":{"name":"Tiger
-        Woods","email":"tigadr@woods.golf"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"}]}}},{"id":"4","type":"user","attributes":{"name":"Tiger
-        Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}]}'
-  recorded_at: Tue, 27 Feb 2024 23:43:12 GMT
+        Woods","email":"tigadr@woods.golf"},"relationships":{"meetups":{"data":[{"id":"1","type":"meetup"},{"id":"4","type":"meetup"},{"id":"5","type":"meetup"}]}}},{"id":"4","type":"user","attributes":{"name":"Tiger
+        Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}},{"id":"5","type":"user","attributes":{"name":"Patrick
+        Mahomes","email":"something113@golf.sports"},"relationships":{"meetups":{"data":[]}}},{"id":"6","type":"user","attributes":{"name":"Tiger
+        Woods","email":"somethingelse13@tigers.tiger"},"relationships":{"meetups":{"data":[]}}},{"id":"7","type":"user","attributes":{"name":"Tiger
+        Woods","email":"tigadr0@woods.golf"},"relationships":{"meetups":{"data":[]}}}]}'
+  recorded_at: Wed, 28 Feb 2024 00:13:33 GMT
 recorded_with: VCR 6.2.0

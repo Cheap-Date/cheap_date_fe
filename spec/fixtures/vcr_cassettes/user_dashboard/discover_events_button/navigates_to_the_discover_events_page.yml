@@ -39,18 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 266880f6-6051-46a9-bcf6-7dd1918ed7c3
+      - 0d9fa764-5358-4bbd-b3df-270180544519
       X-Runtime:
-      - '0.227337'
+      - '0.228479'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=223.91
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=224.80
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:19 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:27 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -88,16 +88,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6c6f1bf6-2317-4232-8cd1-d4ea2a22650e
+      - c39c90db-7e52-45e6-837a-ee2158bbada8
       X-Runtime:
-      - '0.004166'
+      - '0.004619'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.25, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.35
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.74
       Content-Length:
       - '188'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"}]}}}}'
-  recorded_at: Tue, 27 Feb 2024 23:43:19 GMT
+  recorded_at: Wed, 28 Feb 2024 00:14:27 GMT
 recorded_with: VCR 6.2.0

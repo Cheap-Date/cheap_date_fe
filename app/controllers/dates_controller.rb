@@ -26,7 +26,8 @@ class DatesController < ApplicationController
   end
 
   def edit
-    
+    @user = UserFacade.new.user(params[:id])
+    @meetup_facade = MeetupFacade.find_meetup_by_id(@user.id, params[:meetup_id])
   end
 
   private

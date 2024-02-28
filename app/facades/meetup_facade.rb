@@ -9,4 +9,8 @@ class MeetupFacade
       Meetup.new(meetup)
     end
   end
+
+  def self.find_meetup_by_id(id, meetup_id)
+    response = MeetupService.find_meetup_by_id(id, meetup_id)
+  end
 end
