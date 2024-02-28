@@ -35,12 +35,12 @@ class DatesController < ApplicationController
     @meetup_facade = MeetupFacade.find_meetup_by_id(@user.id, params[:meetup_id])
     if update_meetup_params
       response = MeetupFacade.update_meetup(update_meetup_params)
-      # require 'pry'; binding.pry
-      if response[:status] == 200
+      require 'pry'; binding.pry
+      if response.status == 200
         flash[:success] = "Date has been updated!"
         redirect_to "/users/#{@user.id}/meetups"
       else
-        flash[:error] = response[:error]
+        flash[:error] = "Please fill in all fields"
         redirect_back(fallback_location: "/users/#{@user.id}/meetups/#{params[:meetup_id]}")
       end
     end
