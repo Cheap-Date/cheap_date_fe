@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function sendDataToServer(latitude, longitude) {
-  fetch('http://localhost:3000/api/v1/locations', { // Change the port to 3000
+  fetch(`https://localhost:3000/api/v1/events?limit=25&latitude=${latitude}&longitude=${longitude}&price=1`, { // Change the port to 3000
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
