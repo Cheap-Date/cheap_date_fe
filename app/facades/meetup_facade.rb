@@ -12,5 +12,6 @@ class MeetupFacade
 
   def self.find_meetup_by_id(id, meetup_id)
     response = MeetupService.find_meetup_by_id(id, meetup_id)
+    Meetup.new(response["data"]) if response["data"]
   end
 end

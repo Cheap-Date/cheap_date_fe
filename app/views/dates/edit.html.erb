@@ -2,14 +2,13 @@
 
 <%= form_with url: "/users/meetups", method: :patch, local: true, data: { turbo: false } do |form| %>
   <%= form.label :title, "Title" %>
-  <%= form.text_field :title %><br>
+  <%= form.text_field :title, value: @meetup_facade.title %><br>
   <%= form.label :location, "Location" %>
-  <%= form.text_field :location %><br>
+  <%= form.text_field :location, value: @meetup_facade.location %><br>
   <%= form.label :start_time, "Start Time" %>
-  <%= form.time_field :start_time %><br>
+  <%= form.time_field :start_time, value: @meetup_facade.start_time %><br>
   <%= form.label :end_time, "End Time" %>
-  <%= form.time_field :end_time %><br>
-  <%= form.label :first_date, "First Date?" %>
-  <%= form.select :first_date, ["True", "False"] %><br>
+  <%= form.time_field :end_time, value: @meetup_facade.end_time %><br>
+  
   <%= form.submit "Edit This Date" %>
 <% end %>
