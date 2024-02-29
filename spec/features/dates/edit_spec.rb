@@ -12,7 +12,7 @@ RSpec.describe "Edit a Meetup" do
 
     it "should describe the edit a meetup page", :vcr do
       visit "/users/3/meetups/1/edit"
-
+      
       expect(page).to have_content("Edit an Existing Date")
       expect(page).to have_field(:title)
       expect(page).to have_field(:location)
