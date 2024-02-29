@@ -1,17 +1,20 @@
-<h1><%= @user.name %>'s Dates</h1>
+<div class="container">
+    <h1><%= @user.name %>'s Dates</h1>
 
-<% @meetup_facade.each do |meetup| %>
-  <section id="meetup-<%= meetup.id %>">
-    <%= "Title: #{meetup.title}" %><br>
-    <%= "Location: #{meetup.location}" %><br>
-    <%= "Start Time: #{meetup.start_time}" %><br>
-    <%= "End Time: #{meetup.end_time}" %><br>
-    <%= "First Date: #{meetup.first_date}" %><br>
+    <% @meetup_facade.each do |meetup| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Title: <%= meetup.title %></h5>
+          <p class="card-text">Location: <%= meetup.location %></p>
+          <p class="card-text">Start Time: <%= meetup.start_time %></p>
+          <p class="card-text">End Time: <%= meetup.end_time %></p>
+          <p class="card-text">First Date: <%= meetup.first_date %></p>
 
-    <%= button_to "Edit Date", "/users/#{@user.id}/meetups/#{meetup.id}/edit", method: :get %><br>
-  </section>
-<% end %>
+          <%= link_to "Edit Date", "/users/#{@user.id}/meetups/#{meetup.id}/edit", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
 
-<%= button_to "Create Date", "/users/#{@user.id}/dates/new", method: :get %>
-
+    <%= link_to "Create Date", "/users/#{@user.id}/dates/new", class: "btn btn-success" %>
+</div>
 
