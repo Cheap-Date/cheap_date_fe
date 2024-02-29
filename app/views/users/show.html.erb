@@ -1,9 +1,11 @@
-<h1><%= "Welcome #{@user_facade.name}!" %></h1>
+<div class="container">
+    <h1><%= "Welcome #{@user_facade.name}!" %></h1>
 
-<%= button_to "Edit Profile", "/users/#{@id}/edit", method: :get %>
-<%= button_to "Add New Date", "/users/#{@id}/dates/new", method: :get %>
-<%= button_to "Discover Events", "/users/#{@id}/events/new", method: :get %>
-<%= button_to "Discover Foods", "/users/#{@id}/foods/new", method: :get %>
-<%= button_to "Log Out", "/users/logout", method: :delete %>
+    <%= button_to "Edit Profile", "/users/#{@id}/edit", method: :get, class: "btn btn-primary" %>
+    <%= button_to "Add New Date", "/users/#{@id}/dates/new", method: :get, class: "btn btn-success" %>
+    <%= button_to "Discover Events", "/users/#{@id}/events/new", method: :get, class: "btn btn-info" %>
+    <%= button_to "Discover Foods", "/users/#{@id}/foods/new", method: :get, class: "btn btn-warning" %>
+    <%= button_to "Log Out", "/users/logout", method: :delete, class: "btn btn-danger" %>
 
-<h1>Your Dates:</h1>
+    <h1>Your Dates:</h1>
+</div>

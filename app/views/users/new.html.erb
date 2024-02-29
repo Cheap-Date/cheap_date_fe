@@ -1,13 +1,39 @@
-<h1>Create User Profile</h1>
+<div class="container">
+    <h1>Create User Profile</h1>
 
-<%= form_with url: "/users", method: :post, local: true, data: { turbo: false } do |form| %>
-  <%= form.label :name, "Full Name" %>
-  <%= form.text_field :name %><br>
-  <%= form.label :email %>
-  <%= form.text_field :email %><br>
-  <%= form.label :password %>
-  <%= form.text_field :password %><br>
-  <%= form.label :password_confirmation, "Password Confirmation" %>
-  <%= form.text_field :password_confirmation %><br>
-  <%= form.submit "Create Profile" %>
-<% end %>
+    <%= form_with url: "/users", method: :post, local: true, data: { turbo: false }, class: "needs-validation", novalidate: true do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, "Full Name", class: "form-label" %>
+        <%= form.text_field :name, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a valid name.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, class: "form-label" %>
+        <%= form.email_field :email, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a valid email.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :password, class: "form-label" %>
+        <%= form.password_field :password, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a valid password.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :password_confirmation, "Password Confirmation", class: "form-label" %>
+        <%= form.password_field :password_confirmation, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Password confirmation does not match.
+        </div>
+      </div>
+
+      <%= form.submit "Create Profile", class: "btn btn-primary" %>
+    <% end %>
+</div>
