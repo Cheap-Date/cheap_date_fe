@@ -9,20 +9,14 @@ Each repository's services are compartmentalized so that updates and service int
 
 # Getting Started with Cheap Date
 
-To begin your Cheap Date journey, you have two options:
-1. [Using Cheap Date online, hosted on Heroku](heroku_deployment_link) (recommended)
-2. Installing Cheap Date locally
-
-## Local Installation Instructions
-
-If you prefer to install Cheap Date locally on your machine, you'll need the following prerequisites:
+To begin your Cheap Date journey, you'll need the following prerequisites:
 - Ruby Version x.x.x
 - A terminal application, such as Terminal (MacOS) or [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/) (Windows)
 - A code editor, such as [VSCode](https://code.visualstudio.com/)
 
 Once you've installed these prerequisites, you can begin installing Cheap Date.
 
-### Step One: Install the Cheap Date Front End 
+## Step One: Install the Cheap Date Front End 
 
 1. Clone down the [Cheap Date front end.](https://github.com/Cheap-Date/cheap_date_fe)
 2. Open the front end repo within VSCode (or your preferred code editor).
@@ -31,7 +25,7 @@ Once you've installed these prerequisites, you can begin installing Cheap Date.
 5. In the same terminal session, run `rails dev:cache`
 6. Finally, in the same terminal session, run `rails server`
 
-### Step Two: Install the Cheap Date Back End 
+## Step Two: Install the Cheap Date Back End 
 
 1. Clone down the [Cheap Date back end.](https://github.com/Cheap-Date/be_cheap_date)
 2. Open the back end repo within VSCode (or your preferred code editor).
@@ -40,51 +34,11 @@ Once you've installed these prerequisites, you can begin installing Cheap Date.
 5. In the same terminal session, run `rails dev:cache`
 6. In the same terminal session, run `rails server`
 
-### Step Three: Access Cheap Date in your browser
+## Step Three: Access Cheap Date in your browser
 
-Now that the servers are running for both the front end and the back end servers running, you can begin using Cheap Date by visiting `localhost:5000` in your browser.
+Now that the servers are running for both the front end and the back end servers, you can begin using Cheap Date by visiting `localhost:5000` in your browser.
 
 _(Note that the Cheap Date front end is configured to use port 5000 by default, while the backend is configured to use 3000 by default. If these ports are already occupied on your machine, you can edit the port configurations in each repo's copy of `/config/puma.rb'._
-
-# Technical Walkthrough for Developers
-
-## Cheap Date Front End 
-
-### FE Implementation
-
-< insert details of front end technologies, List of Glory items, and core functions >
-
-### FE Testing
-
-< insert details of front end feature and unit testing >
-
-### FE Interface Screenshots
-
-#### Desktop View
-
-< insert screenshots of application front end - Desktop >
-
-#### Mobile View
-
-< insert screenshots of application front end - Mobile >
-
-## Cheap Date Back End
-
-### BE Implementation
-
-< insert details of back end technologies, List of Glory items, and core functions >
-
-### Endpoints for Cheap Date API v1
-
-< insert all API endpoints, along with utilization instructions >
-
-### BE Database
-
-< insert details of database structure >
-
-### BE Testing
-
-< insert details of front end feature and unit testing >
 
 # Credits, Licensing, and Acknowledgments
 
@@ -93,6 +47,7 @@ _(Note that the Cheap Date front end is configured to use port 5000 by default, 
 - [Yelp Fusion API](https://docs.developer.yelp.com/docs/fusion-intro)
 - [Ruby on Rails](https://rubyonrails.org/)
 - [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
+- [Devise](https://github.com/heartcombo/devise)
 - [Faraday](https://github.com/lostisland/faraday)
 - [Capybara](https://github.com/teamcapybara/capybara)
 - [WebMock](https://github.com/bblimke/webmock)
