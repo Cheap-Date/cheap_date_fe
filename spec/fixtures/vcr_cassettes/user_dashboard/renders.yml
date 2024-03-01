@@ -35,22 +35,22 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"ae063ae659d29ced53b12616f97d93c0"
+      - W/"534a1886ef2fb43d557dbb6de7da7582"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0cc4bf2-1c38-4d1d-a5b0-8dbc2623c75f
+      - 11cf414f-ac58-48e2-a9fb-9fb6e1d57856
       X-Runtime:
-      - '0.242661'
+      - '0.227242'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=240.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=224.32
       Content-Length:
-      - '135'
+      - '327'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 19:54:06 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"7","type":"meetup"},{"id":"15","type":"meetup"},{"id":"16","type":"meetup"},{"id":"22","type":"meetup"},{"id":"29","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:04 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/4
@@ -84,22 +84,22 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"ae063ae659d29ced53b12616f97d93c0"
+      - W/"534a1886ef2fb43d557dbb6de7da7582"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9ef6dc32-16c8-4186-b1da-60f839531718
+      - f2d142f9-e913-48ba-9ec4-5b68386e0d7e
       X-Runtime:
-      - '0.004541'
+      - '0.004170'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.55
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.26
       Content-Length:
-      - '135'
+      - '327'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 19:54:06 GMT
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Tiger Woods","email":"tiger@gmail.com"},"relationships":{"meetups":{"data":[{"id":"2","type":"meetup"},{"id":"3","type":"meetup"},{"id":"7","type":"meetup"},{"id":"15","type":"meetup"},{"id":"16","type":"meetup"},{"id":"22","type":"meetup"},{"id":"29","type":"meetup"}]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:04 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/users/1
@@ -133,20 +133,20 @@ http_interactions:
       Vary:
       - Accept, Origin
       Etag:
-      - W/"cd0652bd2dcbb6398d127bcf1dd2517d"
+      - W/"5c5a22958031cf053a7b23ca4ddd54cd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ff199785-836a-4c49-8582-3e45d432dbc4
+      - 9ca943a0-6d26-4a79-a7ca-8eeaa408ae84
       X-Runtime:
-      - '0.003686'
+      - '0.004520'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.19, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.14
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.40
       Content-Length:
-      - '151'
+      - '148'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"armando_bogisich@kozey.test"},"relationships":{"meetups":{"data":[]}}}}'
-  recorded_at: Tue, 27 Feb 2024 19:54:06 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Patrick Mahomes","email":"something110@golf.sports"},"relationships":{"meetups":{"data":[]}}}}'
+  recorded_at: Wed, 28 Feb 2024 17:43:04 GMT
 recorded_with: VCR 6.2.0

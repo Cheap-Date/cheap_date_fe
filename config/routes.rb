@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root "welcome#index"
+
+  # OAuth Callback Route
+  get '/auth/:provider/callback', to: 'sessions#omniauth_log_in'
   
   get "/login", to: "users#login_form"
   post "/login", to: "users#login_user"
@@ -18,6 +21,7 @@ Rails.application.routes.draw do
   get "/users/:id/dates/new", to: "dates#new"
   post "/users/:id/meetups", to: "dates#create"
   get "/users/:id/meetups/:meetup_id/edit", to: "dates#edit"
+  patch "/users/:id/meetups/:meetup_id", to: "dates#update"
 
   get "/users/:id/events/new", to: "events#new"
 

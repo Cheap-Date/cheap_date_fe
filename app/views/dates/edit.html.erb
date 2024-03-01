@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Edit an Existing Date</h1>
+
+    <%= form_with url: "/users/#{@user.id}/meetups/#{@meetup_facade.id}",
+                 method: :patch,
+                 local: true,
+                 data: { turbo: false },
+                 class: "needs-validation",
+                 novalidate: true do |form| %>
+      <div class="mb-3">
+        <%= form.label :title, "Title", class: "form-label" %>
+        <%= form.text_field :title, value: @meetup_facade.title, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a title.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :location, "Location", class: "form-label" %>
+        <%= form.text_field :location, value: @meetup_facade.location, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a location.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :start_time, "Start Time", class: "form-label" %>
+        <%= form.time_field :start_time, value: @meetup_facade.start_time, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a start time.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :end_time, "End Time", class: "form-label" %>
+        <%= form.time_field :end_time, value: @meetup_facade.end_time, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide an end time.
+        </div>
+      </div>
+
+      <%= form.submit "Edit This Date", class: "btn btn-primary" %>
+    <% end %>
+</div>

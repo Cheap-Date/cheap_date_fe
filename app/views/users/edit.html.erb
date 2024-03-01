@@ -1,15 +1,38 @@
-<h1><%= "Editing #{@user.name}'s Profile" %></h1>
+<div class="container">
+    <h1><%= "Editing #{@user.name}'s Profile" %></h1>
 
-<%= link_to "Back to User Dashboard", "/users/#{@id}" %>
+    <%= link_to "Back to User Dashboard", "/users/#{@id}", class: "btn btn-secondary mb-3" %>
 
-<%= form_with url: "/users/#{@id}", method: :patch, local: true, data: { turbo: false } do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name, value: @user.name %><br>
-  <%= form.label :email %>
-  <%= form.text_field :email, value: @user.email %><br>
-  <%= form.label :password %>
-  <%= form.text_field :password %><br>
-  <%= form.label :password_confirmation, "Password Confirmation" %>
-  <%= form.text_field :password_confirmation %><br>
-  <%= form.submit "Update Profile" %>
-<% end %>
+    <%= form_with url: "/users/#{@id}", method: :patch, local: true, data: { turbo: false }, class: "needs-validation", novalidate: true do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, class: "form-label" %>
+        <%= form.text_field :name, value: @user.name, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a valid name.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, class: "form-label" %>
+        <%= form.email_field :email, value: @user.email, class: "form-control", required: true %>
+        <div class="invalid-feedback">
+          Please provide a valid email.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :password, class: "form-label" %>
+        <%= form.password_field :password, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :password_confirmation, "Password Confirmation", class: "form-label" %>
+        <%= form.password_field :password_confirmation, class: "form-control" %>
+        <div class="invalid-feedback">
+          Password confirmation does not match.
+        </div>
+      </div>
+
+      <%= form.submit "Update Profile", class: "btn btn-primary" %>
+    <% end %>
+</div>
