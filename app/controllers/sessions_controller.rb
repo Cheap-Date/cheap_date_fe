@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
         user_info = request.env['omniauth.auth'][:info]
         
         user = UserFacade.new.find_by_email(user_info[:email])
-        require 'pry'; binding.pry
 
         if user.nil?
             flash[:error] = "Invalid email"
