@@ -1,0 +1,14 @@
+<h1>Cheap Doesn't Mean Easy</h1>
+<h3>Point us in the right direction, we find the fun</h3>
+<h6> You can't buy love. Well, not legally, anyway. </h6>
+<h6> But we all could use a little help. And that's why we're here</h6>
+
+  <%= form_with url: "/users/#{@user_id}/events", method: :get do |f| %>
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode, placeholder: "enter 5 digit zip" %>
+    <%= f.label :city_state %>
+    <%= f.text_field :city_state, placeholder: "enter city and/or state" %>
+    <%= f.check_box :geolocation, onchange: "getLocationButton()"%>
+    <%= f.label(:geolocation, "turn on geolocation and we'll take care of the rest!" ) %>
+    <%= f.submit "Find Events!" %>
+  <% end %>

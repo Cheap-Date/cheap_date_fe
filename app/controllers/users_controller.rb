@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = UserFacade.new.find_by_email_and_password(params[:email], params[:password])
     if @user #&& @user.authenticate(params[:password]) #this needs something on the backend (token?)
       session[:user_id] = @user.id
+      session[:user_name] = @user.name
       flash[:success] = "Welcome, #{@user.name}!"
       redirect_to "/users/#{@user.id}"
     else
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def new
-
+    
   end
 
   def show
