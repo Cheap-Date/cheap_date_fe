@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def show
     @id = params[:id]
-    @user_facade = UserFacade.new.user(params[:id])
+    @user_facade = UserFacade.new.user_find(params[:id])
   end
 
   def create
