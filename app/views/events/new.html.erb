@@ -9,6 +9,6 @@
     <%= f.label :city_state %>
     <%= f.text_field :city_state, placeholder: "enter city and/or state" %>
     <%= f.check_box :geolocation, onchange: "getLocationButton()"%>
-    <%= f.label(:geolocation, "turn on geolocation and we'll take care of the rest!" ) %>
-    <%= f.submit "Find Events!" %>
+    <%= f.label(:geolocation, "turn on geolocation" ) %>
+    <%= f.submit "Find Events!", id: "geolocation" %>
   <% end %>
