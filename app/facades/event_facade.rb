@@ -10,11 +10,19 @@ class EventFacade
   def events_by_zip(zip)
     service = EventService.new
     call = service.find_by_zip(zip)
-    # event_poros = create_event_poros(call)
+    @events = make_event_poros(call[:data])
   end
   
   def events_by_city_state(city_state)
     service = EventService.new
     call = service.find_by_city_state(city_state)
+  end
+
+  private
+
+  def make_event_poros(event_res)
+    event_res.map do |event| 
+      Event.new(event)
+    end
   end
 end
