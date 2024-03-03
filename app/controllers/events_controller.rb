@@ -5,9 +5,10 @@ class EventsController < ApplicationController
   end
 
   def index
+    @user = UserFacade.new.user_find(params[:id])
     if params[:zipcode]
-      @facade = EventFacade.new.events_by_zip(params[:zipcode])
-      require 'pry'; binding.pry
+      facade = EventFacade.new
+      @events = facade.events_by_zip(params[:zipcode])
     end
   end
 
