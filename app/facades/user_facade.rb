@@ -1,5 +1,5 @@
 class UserFacade
-  def user(id)
+  def user_find(id)
     service = UserService.new
     response = service.user_find(id)
     user = User.new(response)
